@@ -14,7 +14,7 @@
 
 
 session_start();
-if(!empty($_SESSION['us_tipo'])){
+if(!empty($_SESSION['id_rol'])){
 	header('Location:controlador/LoginController.php');
 }
 else{

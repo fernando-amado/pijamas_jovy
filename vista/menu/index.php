@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['id_rol']==2){
+if($_SESSION['id_rol']==1){
 ?>
 
 <!DOCTYPE html>
