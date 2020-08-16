@@ -26,5 +26,21 @@ class Usuario
 		$this->objetos=$query->fetchall();
 		return $this->objetos;
 	}
+	function Listar()
+    {
+        try
+        {
+            $result = array();
+			$sql="SELECT * FROM usuario";
+            $query = $this->pdo->prepare($sql);
+            $query->execute();
+			$this->objetos=$query->fetchall();
+            return $this->objetos;
+        }
+        catch(Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
 }
  ?>

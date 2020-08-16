@@ -23,6 +23,7 @@ if (!empty($_SESSION['id_rol'])) {
 			$_SESSION['usuario'] = $objeto->id_usuario;
 			$_SESSION['id_rol'] = $objeto->id_rol;
 			$_SESSION['nombre_us'] = $objeto->nombre_us;
+			$_SESSION['apellido_us'] = $objeto->apellido_us;
 		}
 		switch ($_SESSION['id_rol']) {
 			case 1:
