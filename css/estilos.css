@@ -1,0 +1,356 @@
+:root{
+    --colorTextos: #18161673;
+}
+
+
+
+
+.form1{
+    background: #fff;
+    width: 740px;
+    height: 480px;
+    padding: 10px 0;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 9px 0 #0586F9;
+    position: absolute;
+    left: 430px;
+    top: 100px;
+    
+}
+
+.form2{
+    background: #fff;
+    width: 740px;
+    height: 415px;
+    padding: 10px 0;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 9px 0 #0586F9;
+    position: absolute;
+    left: 430px;
+    top: 100px;   
+}
+
+.form3{
+    background: #fff;
+    width: 740px;
+    height: 290px;
+    font-family: Verdana;
+    padding: 10px 0;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 9px 0 #0586F9;
+    position: absolute;
+    left: 430px;
+    top: 100px;   
+}
+
+
+.form4{
+    background: #fff;
+    width: 740px;
+    height: 430px;
+    padding: 10px 0;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 9px 0 #0586F9;
+    position: absolute;
+    left: 430px;
+    top: 100px;
+}
+
+.title{
+
+    background:rgb(92, 187, 250); 
+    color: aliceblue;
+    position: relative;
+    top: -10px;
+    height: 90px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-family: 'poppins';
+}
+
+h1{
+   position: relative;
+   top: 10px;
+}
+
+
+.one-half,
+.one-third {
+    position: relative;
+    margin-left: 3%;
+    float: left;
+        margin-bottom: 30px;
+ 
+}
+ 
+.one-half { width: 45%; }
+.one-third { width: 30.66%; }
+ 
+.last {
+    margin-right: 2% !important;
+    clear: right;
+}
+
+input{
+    background: none;
+    font-family: 'Poppins', sans-serif;
+    color:#5a5555;
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 317px;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+input:focus,textarea:focus{
+    outline: none;
+    color: rgb(17, 16, 16);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 15px;
+    color: #73C0F5;
+    font-family: verdana;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.3s ease all;
+    pointer-events: none;
+    font-family: verdana;
+}
+
+
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background:#73C0F5;
+    transition: 0.3s ease all;
+    left: 0%;
+}
+
+
+.reset{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: whitesmoke;
+    color:  #2B32B2;
+    display: block;
+    width: 150px;
+    height: 40px;
+    border:none; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    position: absolute;
+    top: 230px;
+    left: 52%;
+    cursor: pointer;
+   
+}
+
+.reset:hover{
+    background: linear-gradient(to right, #2B32B2, #1488CC);
+    color:  whitesmoke;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgb(28, 29, 29);
+    transition: all 0.2s ease;
+}
+
+
+.reset1{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: whitesmoke;
+    color:  #2B32B2;
+    display: block;
+    width: 150px;
+    height: 40px;
+    border:none; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    position: absolute;
+    top: 30px;
+    left: 115%;
+    cursor: pointer;
+   
+}
+
+.reset1:hover{
+    background: rgb(92, 187, 250);
+    color:  whitesmoke;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgb(28, 29, 29);
+    transition: all 0.2s ease;
+}
+
+.reset2{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #000;
+    color:  #2B32B2;
+    display: block;
+    width: 150px;
+    height: 40px;
+    border:none; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    position: absolute;
+    top: 350px;
+    left: 52%;
+    cursor: pointer;
+   
+}
+
+.reset2:hover{
+    background:#73C0F5;
+    color:  whitesmoke;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgb(28, 29, 29);
+    transition: all 0.2s ease;
+}
+
+
+
+.boton1{
+    background:linear-gradient(to right, #2B32B2, #1488CC);
+    display: block;
+    width: 150px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+    position: absolute;
+    left: 165%; 
+    top: 30px;   
+}
+
+.boton1:hover{
+    background: whitesmoke;
+    color:  #2B32B2;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px #1488CC;
+    transition: all 0.2s ease;
+}
+
+.boton2{
+    background:linear-gradient(to right, #2B32B2, #1488CC);
+    display: block;
+    width: 150px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+    position: absolute;
+    left: 75%; 
+    top: 230px;   
+}
+
+.boton2:hover{
+    background: whitesmoke;
+    color:  #2B32B2;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px #1488CC;
+    transition: all 0.2s ease;
+}
+.boton3{
+    background:rgb(92, 187, 250);
+    display: block;
+    width: 150px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+    position: absolute;
+    left: 75%; 
+    top: 350px;   
+}
+
+.boton3:hover{
+    background: whitesmoke;
+    color:  #2B32B2;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px #1488CC;
+    transition: all 0.2s ease;
+}
+
+.actualizar{
+    background:linear-gradient(to right, #2B32B2, #1488CC);
+    display: block;
+    width: 200px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+    position: absolute;
+    top: 255px;
+    left: 65%; 
+       
+}
+
+.actualizar:hover{
+    background: whitesmoke;
+    color:  #2B32B2;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px #1488CC;
+    transition: all 0.2s ease;
+}
+
+.ruta{
+    height: 30px;
+}
+
+
+.close{
+    position: absolute;
+    left: 705px;
+    top: 0px;
+    background: #73C0F5;
+    border-radius: 30%;
+}

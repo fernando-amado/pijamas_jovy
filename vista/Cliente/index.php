@@ -9,6 +9,7 @@
 	<link rel="icon" type="image/png" href="../../images/favicon.ico" />
 	<link rel="stylesheet" href="../menu/css/style.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../menu/css/style_icons.css" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="../../css/estilos.css">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 </head>
