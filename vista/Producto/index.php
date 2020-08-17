@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +20,7 @@
 			?>
 		
 		<section class="content">
+
 
 	<div class="container">
 		<div class="row">
@@ -57,6 +59,7 @@
 
 	<?php require_once "modalInsert.php" ?>
 	<?php require_once "modalUpdate.php" ?>
+	
 
 	<script src="../librerias/bootstrap4/jquery-3.4.1.min.js"></script>
 	<script src="../librerias/bootstrap4/popper.min.js"></script>

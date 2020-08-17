@@ -1,7 +1,7 @@
 <?php 
 
-    require_once "../crud/crud.php";
-    $obj= new Crud();
+require_once "../../../modelo/Producto.php";
+$obj= new Crud();
     $datos=$obj->mostrarDatos();
 
     $tabla='<table class="table table-dark">
