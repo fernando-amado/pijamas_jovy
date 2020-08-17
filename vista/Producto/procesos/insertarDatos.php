@@ -1,6 +1,6 @@
 <?php 
 
-    require_once "../crud/crud.php";
+    require_once "../../../modelo/Producto.php";
 
     $datos=array(
             'Nombre_producto' => $_POST['producto'],
