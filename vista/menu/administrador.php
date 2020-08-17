@@ -8,11 +8,11 @@
 	<ul class="second">
 		<li><a class="<?php if($output[1] == 'users'){ echo 'active'; } ?>" href="#">Usuarios</a></li>
 		<li><a class="<?php if($output[1] == 'administratives'){ echo 'active'; } ?>" href="/modules/administratives">Administrativos</a></li>
-		<li><a class="<?php if($output[1] == 'teachers'){ echo 'active'; } ?>" href="/modules/teachers">Empleados</a></li>
+		<li><a class="<?php if($output[1] == 'teachers'){ echo 'active'; } ?>" href="../Usuario/index.php">Empleados</a></li>
 		<li><a class="<?php if($output[1] == 'students'){ echo 'active'; } ?>" href="../Producto/index.php">Producto</a></li>
 	</ul>
 	<ul class="last">
-		<li><a class="<?php if($output[1] == 'subjects'){ echo 'active'; } ?>" href="/modules/subjects">Materias</a></li>
+		<li><a class="<?php if($output[1] == 'subjects'){ echo 'active'; } ?>" href="../Material/index.php">Material</a></li>
 		<li><a class="<?php if($output[1] == 'groups'){ echo 'active'; } ?>" href="/modules/groups">Grupos</a></li>
 	</ul>
 	<ul class="last">
