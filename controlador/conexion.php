@@ -6,5 +6,5 @@
    	  	  return $conexion;
    	  }
    }
- 
+   $mysqli = new mysqli ("localhost","root","","pijamas_jovy");
  ?>
