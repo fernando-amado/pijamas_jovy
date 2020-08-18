@@ -46,7 +46,7 @@
 						</div>
 						<div class="well well-sm text-right">
 						<a class=" btn btn-info" href="../../modelo/reportes/empleados.php" target="_blank"> Generar reporte </a>
-    <a class=" btn btn-info" href="../../modelo/reportes/usuario.php" download="reporteusuario">Descargar reporte </a>
+    <a class=" btn btn-info" href="../../modelo/reportes/empleados.php" download="reporteus">Descargar reporte </a>
 						</div>	
 					</div>
 				</div>
