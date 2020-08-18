@@ -51,11 +51,11 @@ while($row = $resultado->fetch_assoc()){
     $pdf -> Cell(65,10,utf8_decode("Dirección"),1,1,'C',true);
 
     $pdf->Cell(40,10,$row['nombre_us'], 1, 0,'c', 0);
-    $pdf->Cell(50,10,$row['apellidos_us'], 1, 0,'C', 0);
+    $pdf->Cell(50,10,$row['apellido_us'], 1, 0,'C', 0);
     $pdf->Cell(40,10,$row['documento_us'], 1, 0,'C', 0);
     $pdf->Cell(40,10,$row['telefono_us'], 1, 0,'C', 0);
     $pdf->Cell(100,10,$row['correo_us'], 1, 0,'C', 0);
-    $pdf->Cell(65,10,$row['direccion_us'], 1, 1,'C', 0);
+    $pdf->Cell(65,10,$row['direccion_us'], 1, 0,'C', 0);
 }
 
 $pdf->Output();

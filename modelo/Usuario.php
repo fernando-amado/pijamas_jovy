@@ -5,8 +5,6 @@ include_once 'Conexion.php';
  */
 class Usuario
 {
-
-
 	public $id;
 	public $nombre_us;
 	public $apellido_us;
@@ -35,4 +33,3 @@ class Usuario
 	}
 	
 }
- ?>

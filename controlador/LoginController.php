@@ -11,9 +11,11 @@ if (!empty($_SESSION['id_rol'])) {
 		case 1:
 			header('Location: ../vista/menu/index.php');
 			break;
-
 		case 2:
-			header('Location: ../vista/menu/tec_catalogo.php');
+			header('Location: ../vista/menu/index.php');
+			break;
+		case 3:
+			header('Location: ../vista/menu/index.php');
 			break;
 	}
 } else {
@@ -29,14 +31,14 @@ if (!empty($_SESSION['id_rol'])) {
 			case 1:
 				header('Location: ../vista/menu/index.php');
 				break;
-
 			case 2:
-				header('Location: ../vista/menu/tec_catalogo.php');
+				header('Location: ../vista/menu/index.php');
+				break;
+			case 3:
+				header('Location: ../vista/menu/index.php');
 				break;
 		}
 	} else {
-
-		
 		header('Location: ../index.php');
 	}
 }

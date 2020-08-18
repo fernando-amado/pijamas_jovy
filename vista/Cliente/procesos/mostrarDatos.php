@@ -10,7 +10,7 @@ $obj= new Crud();
 							<td>Nombre del cliente</td>
 							<td>Apellidos del cliente</td>
 							<td>Documento </td>
-							<td>Telfono</td>
+							<td>Telefono</td>
 							<td>Correo electronico</td>
 							<td>Direccion</td>
 							<td>Editar</td>

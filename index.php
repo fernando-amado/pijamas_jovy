@@ -54,8 +54,8 @@ session_destroy();
                 <div class="caja2">
                     <form action="controlador/loginController.php" method="post" id="Form">
                         <div class="form-flex">
-                            <label for="nombre" class="texto">Nombre Usuario</label>
-                            <input type="text" id="nombre" name="user" placeholder="Nombre Completo" required>
+                            <label for="nombre" class="texto">Correo Electronico</label>
+                            <input type="text" id="nombre" name="user" placeholder="Correo Electronico" required>
                         </div>
 
                         <div class="form-flex">

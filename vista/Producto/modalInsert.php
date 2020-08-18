@@ -15,11 +15,11 @@
               <label>Nombre del producto</label>
               </div> 
               <div class="one-half last ">
-              <input type="text" id="precio" name="precio"  required=""><span class="barra"></span>
+              <input type="num" id="precio" name="precio"  required=""><span class="barra"></span>
               <label>Precio del producto</label>
               </div>
               <div class="one-half ">
-              <input type="text" id="cantidad" name="cantidad" required="" ><span class="barra"></span>
+              <input type="num" id="cantidad" name="cantidad" required="" ><span class="barra"></span>
               <label>Cantidad de articulos</label>
               </div>
               <div class="one-half last ">
@@ -41,7 +41,6 @@
                </div>
           </form>
       </div>
-      
     </div>
   </div>
 </div>

@@ -1,8 +1,5 @@
 <?php
-
     require_once "../../../controlador/conexion.php";
-    
-
     class Crud extends Conexion{
     	public function mostrarDatos(){
     		$sql="SELECT Id_producto,
@@ -88,5 +85,3 @@
         }
 
     }
-
-?>

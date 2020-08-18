@@ -28,11 +28,12 @@ $obj= new Crud();
 								<td>'.$value['Talla_producto'].'</td>
 								<td>'.$value['Id_orden_trabajo'].'</td>
 								<td>'.$value['Id_pedido'].'</td>
-								<td>
-									<span class="btn btn-info btn-sm" onclick="obtenerDatos('.$value['Id_producto'].')" data-toggle="modal"data-target="#actualizarModal">
+								<td>';
+								if ($usuario=="1" ){ '<span class="btn btn-info btn-sm" onclick="obtenerDatos('.$value['Id_producto'].')" data-toggle="modal"data-target="#actualizarModal">
 										<i class="fas fa-edit"></i>
-									</span>
-									
+									</span>';
+								}
+								'	
 								</td>
 								<td>
 									<span class="btn btn-danger btn-sm" onclick="eliminarDatos('.$value['Id_producto'].')">

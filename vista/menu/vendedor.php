@@ -8,9 +8,7 @@
 			<li><a href="../menu/index.php">Inicio</a></li>
 		</ul>
 		<ul class="second">
-			<li><a href="../Usuario/index.php">Empleados</a></li>
-			<li><a href="../Producto/index.php">Producto</a></li>
-			<li><a href="../Material/index.php">Material</a></li>
+			<li><a href="../Producto/index.php">Productos</a></li>
 		</ul>
 		<ul class="last">
 			<li><a href="../Cliente/index.php">Clientes</a></li>

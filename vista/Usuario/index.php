@@ -42,7 +42,12 @@
 							<div class="col-sm-12">
 									<div id="tablaDatos"></div>
 							</div>
+							
 						</div>
+						<div class="well well-sm text-right">
+						<a class=" btn btn-info" href="../../modelo/reportes/empleados.php" target="_blank"> Generar reporte </a>
+    <a class=" btn btn-info" href="../../modelo/reportes/usuario.php" download="reporteusuario">Descargar reporte </a>
+						</div>	
 					</div>
 				</div>
 			</div>

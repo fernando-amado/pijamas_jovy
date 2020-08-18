@@ -19,15 +19,15 @@
                <label>Apellidos del cliente </label>
              </div> 
                <div class="one-half ">
-               <input type="text" id="documento" name="documento"  required=""><span class="barra"></span>
+               <input type="number" id="documento" name="documento"  required=""><span class="barra"></span>
                <label>Documento </label>
              </div> 
                <div class="one-half last">
-               <input type="text" id="telefono" name="telefono"  required=""><span class="barra"></span>
+               <input type="number" id="telefono" name="telefono"  required=""><span class="barra"></span>
                <label>Telefono </label>
              </div>  
              <div class="one-half ">
-               <input type="text" id="correo" name="correo"  required=""><span class="barra"></span>
+               <input type="email" id="correo" name="correo"  required=""><span class="barra"></span>
                <label>Correo </label>
              </div>
              <div class="one-half last">
@@ -35,7 +35,7 @@
                <label>Dirección </label>
              </div>
              <div class="one-half ">
-               <input type="text" id="contraseña" name="contraseña"  required=""><span class="barra"></span>
+               <input type="password" id="contraseña" name="contraseña"  required=""><span class="barra"></span>
                <label>Contraseña </label>
              </div>
              <div class="one-half last ">
