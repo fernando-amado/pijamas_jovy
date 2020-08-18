@@ -9,6 +9,7 @@
 	<link rel="icon" type="image/png" href="../../images/favicon.ico" />
 	<link rel="stylesheet" href="../menu/css/style.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../menu/css/style_icons.css" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="../../css/estilos.css">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 </head>
@@ -22,22 +23,13 @@
 		<section class="content">
 
 
-	<div class="container">
+	<div class="container1">
 		<div class="row">
-			<h2>Productos</h2>
-			<div class="col-sm-12">
-				<div class="card text-left">
-					<div class="card-header">
-						<ul class="nav nav-tabs card-header-tabs">
-							<li class="nav-item">
-
-							
-							</li>
-						</ul>
+			<h1 class="h">Productos</h1>
 					</div>
-					<div class="card-body">
+				
 						<div class="row">
-							<div class="col-sm-12">
+							<div class="sm-12">
 								<span class="btn btn-info" data-toggle="modal" data-target="#insertarModal">
 									<i class="fas fa-plus-circle"></i> Nuevo registro
 								</span>

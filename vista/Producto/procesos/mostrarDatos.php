@@ -4,7 +4,7 @@ require_once "../../../modelo/Producto.php";
 $obj= new Crud();
     $datos=$obj->mostrarDatos();
 
-    $tabla='<table class="table table-dark">
+    $tabla='<table class="table ">
 					<thead>
 						<tr class="font-weight-bold">
 							<td>Nombre del producto</td>

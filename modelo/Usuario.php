@@ -9,6 +9,7 @@ class Usuario
 
 	public $id;
 	public $nombre_us;
+	public $apellido_us;
 	public $documento_us;
 	public $rol;
 	

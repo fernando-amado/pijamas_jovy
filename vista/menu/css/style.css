@@ -27,28 +27,26 @@ body.login { font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-se
 /*-------------------------------------------
   Inicio | Header
 -------------------------------------------*/
-.header { width: 970px; float: right; height: 50px; margin: 20px 0 35px 0; background: #ffffff; box-shadow: 0 1px 6px rgba(0,0,0,0.1); }
 
-.header:after { display: block; content: ""; clear: both; }
 
 /*-------------------------------------------
   Inicio | Información Usuario
 -------------------------------------------*/
-.info-user { float: right; height: 100%; width: 295px; border-left: 5px solid #E9ECF4; }
+.info-user { background: rgb(24, 25, 26); position: absolute; top: 0px; left: 1230px; height: 80px; width: 370px;}
 
 .info-user img.image_user { float: left; width: 35px; height: 35px; background: #ffffff; margin: 7px 0 7px 15px; border: 1px solid #808080; border-radius: 3em; pointer-events: none; }
 
-.info-user .name_user { display: block; float: left; margin: 5px 0 0 10px; color: #606060; font-size: 1em; font-weight: bold; text-transform: capitalize; }
+.info-user .name_user { display: block; float: left; margin: 5px 0 0 10px; color: #ffffff; font-size: 1em; font-weight: bold; text-transform: capitalize; }
 
-.info-user .logout a { display: block; float: left; margin: 2px 0 0 10px; text-decoration: none; color: #606060; font-size: 0.9em; font-weight: bold; text-transform: capitalize; }
+.info-user .logout a { display: block; position:absolute; top: 30px; left: 60px; margin: 2px 0 0 10px; text-decoration: none; color: #ffffff; font-size: 0.9em; font-weight: bold; text-transform: capitalize; }
 
-.info-user .logout a:hover, .info-user .logout a:focus { color: #538170; outline: none; text-decoration: underline; }
+.info-user .logout a:hover, .info-user .logout a:focus {  color: rgb(92, 187, 250); outline: none; text-decoration: underline; }
 
-.info-user .user_active { display: block; float: right; margin: -7px 20px 0 0; background: #6faf9f; width: 15px; height: 15px; border-radius: 2em; }
+.info-user .user_active { display: block; position:absolute; top: 10px; left: 220px; margin: -7px 20px 0 0; background: rgb(92, 187, 250); width: 15px; height: 15px; border-radius: 2em; }
 
-.info-school-period { float: left; height: 100%; width: 450px; }
+.info-school-period { background: rgb(24, 25, 26); position: absolute; top: 0px; left: 0px; height: 80px; width: 1240px; }
 
-.info-school-period .school_period_user { display: block; float: left; margin: 14px 0 14px 20px; color: #606060; font-size: 1em; font-weight: bold; text-transform: capitalize; }
+.info-school-period .school_period_user { display: block; float: left; margin: 14px 0 14px 20px; color: #ffffff; font-size: 1em; font-weight: bold; text-transform: capitalize; }
 
 .info-school-period .school_period_user a { margin: 14px 0 14px 0px; color: #606060; font-size: 1em; font-weight: bold; text-transform: capitalize; text-decoration: none; }
 
@@ -57,23 +55,23 @@ body.login { font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-se
 /*-------------------------------------------
   Inicio | Nav Admin
 -------------------------------------------*/
-.nav-admin-home { position: fixed; width: 300px; margin: 20px 0 20px 0; top: 0; bottom: 0; background: #6faf9f; box-shadow: 0 1px 6px rgba(0,0,0,0.1); }
+.nav-admin-home { position: absolute; top: 0px; left: -5px; width: 325px;  bottom: 0; background: #101010; }
 
 .nav-admin-home ul { list-style: none; }
 
-.nav-admin-home img.image_user { display: block; width: 120px; height: 120px; background: #ffffff; margin: 25px auto 10px; border: 4px solid rgb(73, 136, 120); border-radius: 10em; pointer-events: none; }
+.nav-admin-home img.image_user { display: block; width: 140px; height: 140px; background: #ffffff; margin: 55px auto 15px; border: 4px solid rgb(92, 187, 250); border-radius: 10em; pointer-events: none; }
 
 .nav-admin-home span.name_user { display: block; color: #ffffff; font-size: 1.2em; font-weight: bold; text-align: center; text-transform: capitalize; }
 
-.nav-admin-home ul.first { margin: 30px 0 0 0; padding: 10px 0; list-style: none; border-top: 2px solid rgb(73, 136, 120); border-bottom: 2px solid rgb(73, 136, 120); }
+.nav-admin-home ul.first { margin: 30px 0 0 0; padding: 10px 0; list-style: none; border-top: 2px solid rgb(92, 187, 250); border-bottom: 2px solid rgb(92, 187, 250); }
 
-.nav-admin-home ul.second { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(73, 136, 120); }
+.nav-admin-home ul.second { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(92, 187, 250); }
 
-.nav-admin-home ul.last { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(73, 136, 120); }
+.nav-admin-home ul.last { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(92, 187, 250); }
 
 .nav-admin-home ul li a{ display: block; color: #ffffff; padding: 10px 30px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; text-decoration: none; }
 
-.nav-admin-home ul li a.active{ border-left: 2px solid #ffffff; background:rgb(73, 136, 120); padding: 10px 28px; }
+.nav-admin-home ul li a.active{ border-left: 2px solid #ffffff; background:rgb(92, 187, 250); padding: 10px 28px; }
 
 /*-------------------------------------------
   Inicio | Mensajes

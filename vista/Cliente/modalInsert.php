@@ -35,7 +35,6 @@
               <input type="text" id="direccion" name="direccion"  required=""><span class="barra"></span>
               <label>Dirección </label>
             </div>
-              <br>
               <input type="reset" class="reset2" value="Reset">
                <input type="submit" value="Guardar" class="boton3">
                <div class="close">

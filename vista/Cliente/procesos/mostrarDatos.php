@@ -4,7 +4,7 @@ require_once "../../../modelo/Cliente.php";
 $obj= new Crud();
     $datos=$obj->mostrarDatos();
 
-    $tabla='<table class="table table-dark">
+    $tabla='<table class="table ">
 					<thead>
 						<tr class="font-weight-bold">
 							<td>Nombre del cliente</td>

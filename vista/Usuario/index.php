@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../menu/css/style_icons.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../../css/estilos.css">
 	<link rel="stylesheet" href="../../css/diseño.css">
+	
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 </head>
@@ -25,7 +26,7 @@
 
 	<div class="container1">
 		<div class="row">
-			<h1 class="h">Cliente</h1>
+			<h1 class="h">Usuarios</h1>
 			
 					</div>
 					

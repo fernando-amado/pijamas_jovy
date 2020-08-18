@@ -1,6 +1,5 @@
-<?php
-	include_once "../menu/index.php";
-?>
+
+		
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,24 +10,21 @@
 	<link rel="stylesheet" href="../menu/css/style.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../menu/css/style_icons.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../../css/estilos.css">
-	<link rel="stylesheet" href="../../css/diseño.css">
+	
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 </head>
 <body>
-	<div class="wrapper">
-		
-			
-		
-		<section class="content">
 
-
+<?php
+	include_once "../menu/index.php"				
+?>
 	<div class="container1">
 		<div class="row">
-			<h1 class="h">Cliente</h1>
+			<h1 class="h">Material</h1>
 			
 					</div>
-					
+				
 						<div class="row">
 							<div class="sm-12">
 								<span class="btn btn-info" data-toggle="modal" data-target="#insertarModal">
