@@ -14,7 +14,7 @@
               <input type="text" id="nombre" name="nombre" required=""><span class="barra"></span>
               <label>Nombre del material</label>
               </div>
-              <div class="one-half ">
+              <div class="one-half last">
               <input type="text" id="cantidad" name="cantidad" required=""><span class="barra"></span>
               <label>Cantidad material </label>
               </div>
@@ -22,7 +22,7 @@
               <input type="text" id="tipo" name="tipo" required="" ><span class="barra"></span>
               <label>Tipo</label>
               </div>
-              <div class="one-half ">
+              <div class="one-half last">
               <input type="text" id="color" name="color" required=""><span class="barra"></span>
               <label>Color</label>
               </div>

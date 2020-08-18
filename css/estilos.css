@@ -29,14 +29,14 @@
 .form1{
     background: #fff;
     width: 740px;
-    height: 480px;
+    height: 440px;
     padding: 10px 0;
     border-radius: 10px;
     align-items: center;
     box-shadow: 0 0 9px 0 #0586F9;
     position: absolute;
     left: 430px;
-    top: 100px;
+    top: 160px;
     
 }
 
@@ -53,19 +53,7 @@
     top: 160px;   
 }
 
-.form3{
-    background: #fff;
-    width: 740px;
-    height: 290px;
-    font-family: Verdana;
-    padding: 10px 0;
-    border-radius: 10px;
-    align-items: center;
-    box-shadow: 0 0 9px 0 #0586F9;
-    position: absolute;
-    left: 430px;
-    top: 100px;   
-}
+
 
 
 .form4{
@@ -110,7 +98,7 @@
 .one-third { width: 30.66%; }
  
 .last {
-    margin-right: 2% !important;
+    margin-right: 4% !important;
     clear: right;
 }
 
@@ -121,7 +109,7 @@ input{
     font-size: 14px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 317px;
+    width: 333px;
     border:none;
     border-bottom: 1px solid var(--colorTextos);
     resize: none;
@@ -191,8 +179,8 @@ input:focus~.barra::before, textarea:focus~.barra::before{
 .reset{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: rgb(172, 240, 234);
-    color:  #2B32B2;
+    background: whitesmoke;
+    color:  #1897eb;
     display: block;
     width: 150px;
     height: 40px;
@@ -219,38 +207,37 @@ input:focus~.barra::before, textarea:focus~.barra::before{
 
 
 .reset1{
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: whitesmoke;
-    color:  #2B32B2;
-    display: block;
-    width: 150px;
-    height: 40px;
-    border:none; 
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 10px auto;
-    position: absolute;
-    top: 30px;
-    left: 115%;
-    cursor: pointer;
-   
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: whitesmoke;
+  color:  #1897eb;
+  display: block;
+  width: 150px;
+  height: 40px;
+  border:none; 
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 10px auto;
+  position: absolute;
+  top: 370px;
+  left: 52%;
+  cursor: pointer;
+ 
 }
 
 .reset1:hover{
-    background: rgb(92, 187, 250);
-    color:  whitesmoke;
-    font-size: 16px;
-    border-radius: 4px;
-    box-shadow: 0 4px 16px rgb(28, 29, 29);
-    transition: all 0.2s ease;
+  background:#73C0F5;
+  color:  whitesmoke;
+  font-size: 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgb(28, 29, 29);
+  transition: all 0.2s ease;
 }
-
 .reset2{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: rgb(172, 240, 234);
-    color:  #2B32B2;
+    background: whitesmoke;
+    color:  #1897eb;
     display: block;
     width: 150px;
     height: 40px;
@@ -303,29 +290,30 @@ input:focus~.barra::before, textarea:focus~.barra::before{
 
 
 .boton2{
-    background:linear-gradient(to right, #2B32B2, #1488CC);
-    display: block;
-    width: 150px;
-    height: 40px;
-    border:none;
-    color:#fff; 
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 10px auto;
-    cursor: pointer;
-    position: absolute;
-    left: 75%; 
-    top: 230px;   
+  background:rgb(92, 187, 250);
+  display: block;
+  width: 150px;
+  height: 40px;
+  border:none;
+  color:#fff; 
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 10px auto;
+  cursor: pointer;
+  position: absolute;
+  left: 75%; 
+  top: 370px;   
 }
 
 .boton2:hover{
-    background: whitesmoke;
-    color:  #2B32B2;
-    font-size: 16px;
-    border-radius: 4px;
-    box-shadow: 0 4px 16px #1488CC;
-    transition: all 0.2s ease;
+  background: whitesmoke;
+  color:  #2B32B2;
+  font-size: 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px #1488CC;
+  transition: all 0.2s ease;
 }
+
 .boton3{
     background:rgb(92, 187, 250);
     display: block;

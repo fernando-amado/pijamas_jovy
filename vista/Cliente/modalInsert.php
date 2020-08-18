@@ -23,7 +23,7 @@
               <input type="text" id="documento" name="documento"  required=""><span class="barra"></span>
               <label>Documento </label>
             </div> 
-              <div class="one-half ">
+              <div class="one-half last">
               <input type="text" id="telefono" name="telefono"  required=""><span class="barra"></span>
               <label>Telefono </label>
             </div>  
@@ -31,7 +31,7 @@
               <input type="text" id="correo" name="correo"  required=""><span class="barra"></span>
               <label>Correo </label>
             </div>
-            <div class="one-half ">
+            <div class="one-half last">
               <input type="text" id="direccion" name="direccion"  required=""><span class="barra"></span>
               <label>Dirección </label>
             </div>

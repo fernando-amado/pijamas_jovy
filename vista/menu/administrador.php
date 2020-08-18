@@ -7,7 +7,7 @@
 	<img class="image_user" src="../../img/avatar2.png" />
 	<span class="name_user"><?php echo $_SESSION['nombre_us'].' '.$_SESSION['apellido_us'];?></span>
 	<ul class="first">
-		<li><a class="<?php if($output[1] == 'school_periods'){ echo 'active'; } ?>" href="/modules/school_periods">Periodo Escolar</a></li>
+		<li><a class="<?php if($output[1] == 'school_periods'){ echo 'active'; } ?>" href="#">Inicio</a></li>
 	</ul>
 	<ul class="second">
 		<li><a class="<?php if($output[1] == 'users'){ echo 'active'; } ?>" href="../Usuario/index.php">Usuarios</a></li>

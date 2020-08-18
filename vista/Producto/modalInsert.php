@@ -14,7 +14,7 @@
               <input type="text" id="producto" name="producto"  required=""><span class="barra"></span>
               <label>Nombre del producto</label>
               </div> 
-              <div class="one-half ">
+              <div class="one-half last ">
               <input type="text" id="precio" name="precio"  required=""><span class="barra"></span>
               <label>Precio del producto</label>
               </div>
@@ -22,7 +22,7 @@
               <input type="text" id="cantidad" name="cantidad" required="" ><span class="barra"></span>
               <label>Cantidad de articulos</label>
               </div>
-              <div class="one-half ">
+              <div class="one-half last ">
               <input type="text" id="talla" name="talla" required=""><span class="barra"></span>
               <label>Tallas</label>
               </div>
@@ -30,7 +30,7 @@
               <input type="text" id="ordentrabajo" name="ordentrabajo" required=""><span class="barra"></span>
               <label>Orden Trabajo</label>
               </div>
-              <div class="one-half ">
+              <div class="one-half last">
               <input type="text" id="pedido" name="pedido" required=""><span class="barra"></span>
               <label>Pedido</label>
               </div>

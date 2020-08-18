@@ -21,8 +21,8 @@
     	}
 
         public function insertarDatos($datos){
-            $sql="INSERT into usuario ( nombre_us, apellido_us, documento_us, telefono_us, correo_us, direccion_us, rol)
-                            values ( :nombre_us, :apellido_us, :documento_us, :telefono_us, :correo_us, :direccion_us, :rol)";
+            $sql="INSERT into usuario ( nombre_us, apellido_us, documento_us, telefono_us, correo_us, direccion_us, contrasena, rol)
+                            values ( :nombre_us, :apellido_us, :documento_us, :telefono_us, :correo_us, :direccion_us, :contrasena, :rol)";
             $query=Conexion::conectar()->prepare($sql);
             $query->bindparam(":nombre_us", $datos["nombre_us"], PDO::PARAM_STR);
             $query->bindparam(":apellido_us", $datos["apellido_us"], PDO::PARAM_STR);
@@ -30,6 +30,7 @@
             $query->bindparam(":telefono_us", $datos["telefono_us"], PDO::PARAM_STR);
             $query->bindparam(":correo_us", $datos["correo_us"], PDO::PARAM_STR);
             $query->bindparam(":direccion_us", $datos["direccion_us"], PDO::PARAM_STR);
+            $query->bindparam(":contrasena", $datos["contrasena"], PDO::PARAM_STR);
             $query->bindparam(":rol", $datos["rol"], PDO::PARAM_STR);
             
 

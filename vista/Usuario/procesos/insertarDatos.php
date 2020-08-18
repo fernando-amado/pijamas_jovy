@@ -9,6 +9,7 @@
             'telefono_us' => $_POST['telefono'],
             'correo_us' => $_POST['correo'],
             'direccion_us' => $_POST['direccion'],
+            'contrasena' => $_POST['contraseña'],
             'rol' => $_POST['rol'], 
                  );
 
