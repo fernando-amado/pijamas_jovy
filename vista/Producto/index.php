@@ -13,6 +13,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 </head>
+
 <body>
 	<div class="wrapper">
 		<?php
@@ -35,7 +36,11 @@
 					<div class="col-sm-12">
 						<div id="tablaDatos"></div>
 					</div>
-				</div>	
+				</div>
+				<div class="well well-sm text-right">
+					<a class=" btn btn-info" href="../../modelo/reportes/producto.php" target="_blank"> Generar reporte </a>
+					<a class=" btn btn-info" href="../../modelo/reportes/producto.php" download="reporteus">Descargar reporte </a>
+				</div>
 			</div>
 	</div>
 	</div>

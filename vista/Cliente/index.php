@@ -38,7 +38,7 @@ include_once "../menu/index.php";
 				<?php if ($usuario=="1" ){ ?>
 				<div class="well well-sm text-right">
 					<a class=" btn btn-info" href="../../modelo/reportes/cliente.php" target="_blank"> Generar reporte </a>
-					<a class=" btn btn-info" href="../../modelo/reportes/cliente.php" download="reporteusuario">Descargar reporte </a>
+					<a class=" btn btn-info" href="../../modelo/reportes/cliente.php" download="reportecliente">Descargar reporte </a>
 				</div>
 				<?php }?>
 				
