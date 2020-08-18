@@ -18,7 +18,11 @@ function obtenerDatos(id){
 
 			$('#Id_material').val(r['Id_material']);
 			$('#nombreu').val(r['Nombre_material']);
+<<<<<<< HEAD
 			$('#cantidadu ').val(r['Cantidad_material']);
+=======
+			$('#cantiadu ').val(r['Cantidad_material']);
+>>>>>>> e8e14cc318fce5f81eef4c0067baf12bee4ef076
 			$('#tipou').val(r['Tipo_material']);
 			$('#coloru').val(r['Color']);
 			$('#descripcionu').val(r['Descripcion']);
@@ -62,7 +66,11 @@ function eliminarDatos(id){
 		    $.ajax({
 		    	type:"POST",
 		    	url:"procesos/eliminarDatos.php",
+<<<<<<< HEAD
 		    	data:`Id_material=${id}`,
+=======
+		    	data:`Id_cliente=${id}`,
+>>>>>>> e8e14cc318fce5f81eef4c0067baf12bee4ef076
 		    	success:function(r){
 		    		if(r==1){
 		    			mostrar();

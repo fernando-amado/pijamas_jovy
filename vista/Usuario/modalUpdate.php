@@ -10,6 +10,7 @@
       </div>
       <div class="modal-body">
           <form id="frminsertu" onsubmit="return actualizarDatos()" method="post">
+<<<<<<< HEAD
             <input type="text" id="id_usuario" name="id_usuario" hidden="">
               <br><label>Nombre del cliente</label>
               <input type="text" id="nombreu" name="nombreu" class="form-control form-control-sm" required="">
@@ -17,6 +18,15 @@
               <input type="text" id="apellidou" name="apellidou" class="form-control form-control-sm" required="">
               <label>Documento</label>
               <input type="text" id="documentou" name="documentou" class="form-control form-control-sm">
+=======
+            <input type="text" id="id_cliente" name="id_cliente" hidden="">
+              <br><label>Nombre del cliente</label>
+              <input type="text" id="nombreu" name="nombreu" class="form-control form-control-sm" required="">
+              <label>Apellidos del cliente</label>
+              <input type="text" id="apellidou" name="apellidouu" class="form-control form-control-sm" required="">
+              <label>Documento</label>
+              <input type="text" id="documentou" name="documento" class="form-control form-control-sm">
+>>>>>>> e8e14cc318fce5f81eef4c0067baf12bee4ef076
               <label>Telefono</label>
               <input type="text" id="telefonou" name="telefonou" class="form-control form-control-sm">
               <label>Correo electronico</label>

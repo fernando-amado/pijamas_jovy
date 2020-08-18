@@ -18,7 +18,11 @@ function obtenerDatos(id){
 
 			$('#id_usuario').val(r['id_usuario']);
 			$('#nombreu').val(r['nombre_us']);
+<<<<<<< HEAD
 			$('#apellidou ').val(r['apellido_us']);
+=======
+			$('#apellidou ').val(r['apellidos_us']);
+>>>>>>> e8e14cc318fce5f81eef4c0067baf12bee4ef076
 			$('#documentou').val(r['documento_us']);
 			$('#telefonou').val(r['telefono_us']);
 			$('#correou').val(r['correo_us']);

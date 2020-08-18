@@ -4,6 +4,7 @@ require_once "../../../modelo/Material.php";
 $obj= new Crud();
     $datos=$obj->mostrarDatos();
 
+<<<<<<< HEAD
     $tabla='<table class="table ">
 					<thead>
 						<tr class="font-weight-bold">
@@ -12,6 +13,16 @@ $obj= new Crud();
 							<td>Tipo de material</td>
 							<td>Color</td>
 							<td>Descripcion del material</td>
+=======
+    $tabla='<table class="table table-dark">
+					<thead>
+						<tr class="font-weight-bold">
+							<td>Nombre del material</td>
+							<td>Cantidad material</td>
+							<td>Tipo de material</td>
+							<td>Color</td>
+							<td>Descripcion</td>
+>>>>>>> e8e14cc318fce5f81eef4c0067baf12bee4ef076
 							<td>Editar</td>
 							<td>Eliminar</td>
 						</tr>

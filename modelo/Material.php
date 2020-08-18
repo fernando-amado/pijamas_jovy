@@ -11,7 +11,11 @@
                         Tipo_material,
                         Color,
                         Descripcion
+<<<<<<< HEAD
     		    from material";
+=======
+    		    from cliente";
+>>>>>>> e8e14cc318fce5f81eef4c0067baf12bee4ef076
     		$query=Conexion::conectar()->prepare($sql);
     		$query->execute();
     		return $query->fetchAll();

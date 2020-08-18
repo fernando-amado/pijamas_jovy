@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 if($_SESSION['id_rol']==1){
 ?>
 
@@ -20,8 +20,13 @@ if($_SESSION['id_rol']==1){
 	<div class="wrapper">
 		<header class="header">
         <div class="info-user">
+<<<<<<< HEAD
 	<img class="image_user" src="../../img/avatar2.png" />
 	<span class="name_user"><?php echo $_SESSION ['nombre_us'].' '.$_SESSION['apellido_us'];?></span>
+=======
+	<img class="image_user" src="/images/users/" />
+	<span class="name_user"><?php echo $_SESSION ['nombre_us'].' '. $_SESSION ['apellido_us'];?></span>
+>>>>>>> e8e14cc318fce5f81eef4c0067baf12bee4ef076
 	<span class="logout"><a href="../../controlador/Logout.php">Cerrar Sesión</a></span>
 	<span class="user_active"></span>
 	
