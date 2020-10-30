@@ -1,85 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="icon" href="img/icono.png">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Iniciar Sesión</title>
-    <?php 
+require_once "controladores/plantilla.controlador.php";
+require_once "controladores/usuarios.controlador.php";
+require_once "controladores/categorias.controlador.php";
+require_once "controladores/productos.controlador.php";
+require_once "controladores/clientes.controlador.php";
+require_once "controladores/ventas.controlador.php";
+require_once "controladores/tipomaterial.controlador.php";
+require_once "controladores/material.controlador.php";
+require_once "controladores/ordentrabajo.controlador.php";
 
 
-session_start();
-if(!empty($_SESSION['id_rol'])){
-	header('Location:controlador/LoginController.php');
+require_once "modelos/usuarios.modelo.php";
+require_once "modelos/categorias.modelo.php";
+require_once "modelos/productos.modelo.php";
+require_once "modelos/clientes.modelo.php";
+require_once "modelos/ventas.modelo.php";
+require_once "modelos/tipomaterial.modelo.php";
+require_once "modelos/material.modelo.php";
+require_once "modelos/ordentrabajo.modelo.php";
+require_once "extensiones/vendor/autoload.php";
+require_once "config/config.php";
+
+
+
+$controller = 'plantilla';
+
+
+// Todo esta lógica hara el papel de un FrontController
+if(!isset($_REQUEST['c']))
+{
+    require_once "controladores/$controller.controlador.php";
+    $controller = 'Controlador'. ucwords($controller) ;
+    $controller = new $controller;
+    $controller->ctrPlantilla();    
 }
-else{
-session_destroy();
-
- ?>
-</head>
-<body>
-    <!-- FONDO -->
-    <div class="fond-pink">
-    </div>
-    <div class="fond-blue">
-    </div>
-
-    <!-- LOGIN -->
-    <header>
-        <div class="container">
-            <div class="container-flex">
-
-                <!-- CAJA 1 -->
-                <div class="caja1">
-                    <div class="checked-flex">
-                        <input type="checkbox" class="checked-color" id="check">
-                        <p>Sitio web</p>
-                    </div>
-                    <div class="caja1-titulo">
-                        <h1>Pijamas jovy</h1>
-                    </div>
-                    <div class="selectForm">
-                        <div class="select-i">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CAJA 2 -->
-                <div class="caja2">
-                    <form action="controlador/loginController.php" method="post" id="Form">
-                        <div class="form-flex">
-                            <label for="nombre" class="texto">Nombre Usuario</label>
-                            <input type="text" id="nombre" name="user" placeholder="Nombre Completo" required>
-                        </div>
-
-                        <div class="form-flex">
-                            <label for="contra" class="texto">Contraseña</label>
-                            <input type="password" id="contra" name="pass" placeholder="Contraseña" required>
-                        </div>
-                        
-
-                        
-
-                        <input type="submit" value="Iniciar Sesión" class="boton">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-    <!-- URL JAVASCRIPT -->
-    <script src="js/login.js"></script>
-</body>
-
-
-</html>
-<?php 	
+else
+{
+    // Obtenemos el controlador que queremos cargar
+    $controller = strtolower($_REQUEST['c']);
+    $accion = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'Index';
+    
+    // Instanciamos el controlador
+    require_once "controladores/$controller.controlador.php";
+    $controller =  'Controlador'.ucwords($controller) ;
+    $controller = new $controller;
+    
+    // Llama la accion
+    call_user_func( array($controller, $accion ) );
 }
-?>
