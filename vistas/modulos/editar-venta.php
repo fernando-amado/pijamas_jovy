@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> fernando
 <div class="content-wrapper">
 
   <section class="content-header">

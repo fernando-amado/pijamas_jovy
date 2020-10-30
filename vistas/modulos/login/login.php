@@ -58,7 +58,11 @@
         
       ?>
 </div>
+<<<<<<< HEAD
 <a style="position:absolute; top:380px; left:50%;" href="vistas/modulos/recuperacion.php " >Recordar contraseña</a>
+=======
+<a style="position:absolute; top:380px; left:50%;" href="index.php?c=usuarios">Recordar contraseña</a>
+>>>>>>> fernando
       </div>
     </div>
   </div>
@@ -69,3 +73,21 @@
 
 </div>
 </div>
+<<<<<<< HEAD
+=======
+<?php 
+if(isset($_GET["recupera"])){
+  if($_GET["recupera"] == "recuperacion" ){
+
+ include "".$_GET["recupera"].".php";
+ 
+
+}else{
+
+ echo"error";
+ 
+
+}
+}
+?>
+>>>>>>> fernando

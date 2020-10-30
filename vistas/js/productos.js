@@ -206,8 +206,11 @@ $(".tablaProductos tbody").on("click", "button.btnEditarProducto", function(){
 
 })
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fernando
 /*=============================================
 ELIMINAR PRODUCTO
 =============================================*/

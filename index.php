@@ -20,6 +20,38 @@ require_once "modelos/tipomaterial.modelo.php";
 require_once "modelos/material.modelo.php";
 require_once "modelos/ordentrabajo.modelo.php";
 require_once "extensiones/vendor/autoload.php";
+<<<<<<< HEAD
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrPlantilla();
+=======
+require_once "config/config.php";
+
+
+
+$controller = 'plantilla';
+
+
+// Todo esta lógica hara el papel de un FrontController
+if(!isset($_REQUEST['c']))
+{
+    require_once "controladores/$controller.controlador.php";
+    $controller = 'Controlador'. ucwords($controller) ;
+    $controller = new $controller;
+    $controller->ctrPlantilla();    
+}
+else
+{
+    // Obtenemos el controlador que queremos cargar
+    $controller = strtolower($_REQUEST['c']);
+    $accion = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'Index';
+    
+    // Instanciamos el controlador
+    require_once "controladores/$controller.controlador.php";
+    $controller =  'Controlador'.ucwords($controller) ;
+    $controller = new $controller;
+    
+    // Llama la accion
+    call_user_func( array($controller, $accion ) );
+}
+>>>>>>> fernando

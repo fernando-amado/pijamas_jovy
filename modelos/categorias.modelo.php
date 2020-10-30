@@ -1,8 +1,14 @@
 <?php
 
 require_once "conexion.php";
+<<<<<<< HEAD
 
 class ModeloCategorias{
+=======
+use \Modelos\Conexion;
+
+class ModeloCategorias extends Conexion{
+>>>>>>> fernando
 
 	/*=============================================
 	CREAR CATEGORIA

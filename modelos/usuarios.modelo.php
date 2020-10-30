@@ -1,8 +1,19 @@
 <?php
 
+<<<<<<< HEAD
 require_once "conexion.php";
 
 class ModeloUsuarios{
+=======
+namespace Modelos;
+require_once "conexion.php";
+use \Modelos\Conexion;
+use \Exception, \PDOException;
+use PDO;
+use Libs\Helper;
+
+class ModeloUsuarios extends Conexion{
+>>>>>>> fernando
 
 	/*=============================================
 	MOSTRAR USUARIOS
@@ -43,14 +54,21 @@ class ModeloUsuarios{
 
 	static public function mdlIngresarUsuario($tabla, $datos){
 
+<<<<<<< HEAD
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, usuario, password, perfil, foto, correo) VALUES (:nombre, :usuario, :password, :perfil, :foto, :correo)");
+=======
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, usuario, password, perfil, foto) VALUES (:nombre, :usuario, :password, :perfil, :foto)");
+>>>>>>> fernando
 
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt->bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
 		$stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
 		$stmt->bindParam(":perfil", $datos["perfil"], PDO::PARAM_STR);
 		$stmt->bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
+<<<<<<< HEAD
 		$stmt->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
+=======
+>>>>>>> fernando
 
 		if($stmt->execute()){
 
@@ -74,15 +92,23 @@ class ModeloUsuarios{
 
 	static public function mdlEditarUsuario($tabla, $datos){
 	
+<<<<<<< HEAD
 		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre, password = :password, perfil = :perfil, foto = :foto, correo = :correo WHERE usuario = :usuario");
+=======
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre, password = :password, perfil = :perfil, foto = :foto WHERE usuario = :usuario");
+>>>>>>> fernando
 
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt -> bindParam(":password", $datos["password"], PDO::PARAM_STR);
 		$stmt -> bindParam(":perfil", $datos["perfil"], PDO::PARAM_STR);
 		$stmt -> bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
+<<<<<<< HEAD
 		$stmt -> bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
 		$stmt -> bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
 		
+=======
+		$stmt -> bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
+>>>>>>> fernando
 
 		if($stmt -> execute()){
 
@@ -154,4 +180,136 @@ class ModeloUsuarios{
 
 	}
 
+<<<<<<< HEAD
+=======
+	/*=============================================
+	VERIFICACION DE CORREO
+	=============================================*/
+	static public function getUserWithEmail($p_correo)
+    {
+		$stmt = Conexion::conectar()->prepare("SELECT id, nombre, usuario,correo, password , perfil,foto, estado,ultimo_login, Ordenes,  fecha, codigo, fechaRecuperacion FROM usuarios WHERE correo= :p_correo LIMIT 1");
+    
+        $parameters = array(':p_correo' => $p_correo);
+
+        try {
+			
+            $query = $stmt;
+            $query->execute($parameters);
+            return ($query->rowcount() ? $query->fetch() : false);
+
+        } catch (PDOException $e) {
+
+            $logModel = new Log();
+            $sql = Helper::debugPDO($stmt, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+
+        } catch (Exception $e) {
+            
+            $logModel = new Log();
+            $sql = Helper::debugPDO($sql, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+        }
+	}
+
+	/**
+     * Obtener una persona por el código generado para el cambio de contraseña
+     * @param string $p_codigo
+     */
+    public function getUserWithCode($p_codigo)
+    {
+        $sql = "SELECT id, nombre, usuario,correo, password , perfil,foto, estado,ultimo_login, Ordenes,  fecha, codigo, fechaRecuperacion FROM usuario WHERE codigo = :p_codigo LIMIT 1";
+        $parameters = array(':p_codigo' => $p_codigo);
+
+        try {
+
+            $query = $this->db->prepare($sql);
+            $query->execute($parameters);
+            return ($query->rowcount() ? $query->fetch() : false);
+
+        } catch (PDOException $e) {
+
+            $logModel = new Log();
+            $sql = Helper::debugPDO($sql, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+
+        } catch (Exception $e) {
+            
+            $logModel = new Log();
+            $sql = Helper::debugPDO($sql, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+        }
+	}
+	
+	
+	/*=============================================
+	ACTUALIACION DE CODIGO Y FECHA DE RECUPERACION
+	=============================================*/
+	public function recoverPassword($p_correo, $p_codigo, $p_fechaRecuperacion)
+    {
+        $stmt = Conexion::conectar()->prepare( "UPDATE usuarios SET codigo = :p_codigo, fechaRecuperacion = :p_fechaRecuperacion WHERE correo = :p_correo");
+        $parameters = array(
+            ':p_correo' => $p_correo,
+            ':p_codigo' => $p_codigo,
+            ':p_fechaRecuperacion' => $p_fechaRecuperacion
+        );
+
+        try {
+
+            $query = $stmt;
+            return $query->execute($parameters);
+
+        } catch (PDOException $e) {
+
+            $logModel = new Log();
+            $sql = Helper::debugPDO($stmt, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+
+        } catch (Exception $e) {
+            
+            $logModel = new Log();
+            $sql = Helper::debugPDO($sql, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+        }
+	}
+	 /**
+     * Cambiar la contraseña desde la recuperación de la cuenta
+     * @param string $p_idUsuario Id Usuario
+     * @param string $p_contrasena Contraseña
+     */
+    public function updatePasswordFromRecover($p_id, $p_password)
+    {
+        $stmt = Conexion::conectar()->prepare("UPDATE usuarios SET password = :p_password, codigo = NULL, fechaRecuperacion = NULL WHERE id = :p_id");
+        $parameters = array(
+            ':p_password' => $p_password,
+            ':p_id' => $p_id
+        );
+
+        try {
+
+            $query = $stmt;
+            return $query->execute($parameters);
+
+        } catch (PDOException $e) {
+
+            $logModel = new Log();
+            $sql = Helper::debugPDO($stmt, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+
+        } catch (Exception $e) {
+            
+            $logModel = new Log();
+            $sql = Helper::debugPDO($sql, $parameters);
+            $logModel->addLog($sql, 'User', $e->getCode(), $e->getMessage());
+            return false;
+        }
+    }
+
+>>>>>>> fernando
 }

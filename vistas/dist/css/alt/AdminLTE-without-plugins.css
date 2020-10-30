@@ -1306,7 +1306,11 @@ a:focus {
 .input-lg + .form-control-feedback.fa,
 .input-group-lg + .form-control-feedback.fa,
 .form-group-lg .form-control + .form-control-feedback.fa {
+<<<<<<< HEAD
   line-height: 20px;
+=======
+  line-height: 46px;
+>>>>>>> fernando
 }
 .input-sm + .form-control-feedback.fa,
 .input-group-sm + .form-control-feedback.fa,

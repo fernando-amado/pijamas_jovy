@@ -735,12 +735,19 @@ $(".tablas").on("click", ".btnImprimirFactura", function(){
 
 	var codigoVenta = $(this).attr("codigoVenta");
 
+<<<<<<< HEAD
 	window.location = "index.php?ruta=detalleventa&codigoVenta="+codigoVenta;
 
 })
 
 
 
+=======
+	window.open("extensiones/tcpdf/pdf/factura.php?codigo="+codigoVenta, "_blank"); 
+
+})
+
+>>>>>>> fernando
 /*=============================================
 IMPRIMIR Ticket
 =============================================*/

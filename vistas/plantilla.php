@@ -39,8 +39,12 @@ session_start();
   <link rel="stylesheet" href="vistas/dist/css/skins/_all-skins.css">
 
   <!-- Google Font -->
+<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+=======
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+>>>>>>> fernando
 
    <!-- DataTables -->
   <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
@@ -118,6 +122,14 @@ CUERPO DOCUMENTO
  
   <?php
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> fernando
   if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
 
    echo '<div class="wrapper">';
@@ -152,13 +164,19 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "verventa" ||
          $_GET["ruta"] == "crear-venta" ||
          $_GET["ruta"] == "editar-venta" ||
+<<<<<<< HEAD
          $_GET["ruta"] == "detalleventa" ||
+=======
+>>>>>>> fernando
          $_GET["ruta"] == "tipomaterial" ||
          $_GET["ruta"] == "material" ||
          $_GET["ruta"] == "ordentrabajo" ||
          $_GET["ruta"] == "crear-ordentrabajo" ||
+<<<<<<< HEAD
          $_GET["ruta"] == "editar-ordentrabajo" ||
          $_GET["ruta"] == "detalleorden" ||
+=======
+>>>>>>> fernando
          $_GET["ruta"] == "reportes" ||
          $_GET["ruta"] == "salir"){
 
@@ -176,8 +194,11 @@ CUERPO DOCUMENTO
 
       include "modulos/inicio.php";
        
+<<<<<<< HEAD
     include "modulos/recuperacion.php";
       
+=======
+>>>>>>> fernando
 
     }
 
@@ -191,11 +212,20 @@ CUERPO DOCUMENTO
     echo '</div>';
     
    
+<<<<<<< HEAD
    
   }else{
   
     include "modulos/login/login.php";
   }
+=======
+   }
+   else{
+  
+    include "modulos/login/login.php";
+  }
+
+>>>>>>> fernando
   ?>
 
 <script src="vistas/js/plantilla.js"></script>

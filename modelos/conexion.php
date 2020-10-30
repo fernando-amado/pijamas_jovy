@@ -1,4 +1,10 @@
 <?php
+<<<<<<< HEAD
+=======
+namespace Modelos;
+use PDO;
+
+>>>>>>> fernando
 
 class Conexion{
 

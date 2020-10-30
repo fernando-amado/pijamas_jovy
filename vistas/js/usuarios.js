@@ -72,7 +72,10 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			
 			$("#editarNombre").val(respuesta["nombre"]);
 			$("#editarUsuario").val(respuesta["usuario"]);
+<<<<<<< HEAD
 			$("#editarCorreo").val(respuesta["correo"]);
+=======
+>>>>>>> fernando
 			$("#editarPerfil").html(respuesta["perfil"]);
 			$("#editarPerfil").val(respuesta["perfil"]);
 			$("#fotoActual").val(respuesta["foto"]);
@@ -182,7 +185,11 @@ $("#nuevoUsuario").change(function(){
 	    	
 	    	if(respuesta){
 
+<<<<<<< HEAD
 	    		$("#nuevoUsuario").parent().after('<div class="alert alert-warning">Este usuario ya existe en el sistema </div>');
+=======
+	    		$("#nuevoUsuario").parent().after('<div class="alert alert-warning">Este usuario ya existe en la base de datos</div>');
+>>>>>>> fernando
 
 	    		$("#nuevoUsuario").val("");
 

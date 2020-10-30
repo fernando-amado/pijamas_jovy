@@ -2747,14 +2747,22 @@ select[multiple].input-sm {
   line-height: 1.5;
 }
 .input-lg {
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
 }
 select.input-lg {
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   line-height: 46px;
 }
 textarea.input-lg,
@@ -2762,14 +2770,22 @@ select[multiple].input-lg {
   height: auto;
 }
 .form-group-lg .form-control {
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
 }
 .form-group-lg select.form-control {
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   line-height: 46px;
 }
 .form-group-lg textarea.form-control,
@@ -2777,7 +2793,11 @@ select[multiple].input-lg {
   height: auto;
 }
 .form-group-lg .form-control-static {
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   min-height: 38px;
   padding: 11px 16px;
   font-size: 18px;
@@ -2805,7 +2825,11 @@ select[multiple].input-lg {
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
   width: 46px;
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   line-height: 46px;
 }
 .input-sm + .form-control-feedback,
@@ -3841,7 +3865,11 @@ tbody.collapse.in {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
@@ -3850,7 +3878,11 @@ tbody.collapse.in {
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
+<<<<<<< HEAD
   height: 20px;
+=======
+  height: 46px;
+>>>>>>> fernando
   line-height: 46px;
 }
 textarea.input-group-lg > .form-control,

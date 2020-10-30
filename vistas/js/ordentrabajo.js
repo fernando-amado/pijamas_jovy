@@ -94,6 +94,7 @@ $(".tablaOrden tbody").on("click", "button.agregarMaterial", function(){
 
           	}
 
+<<<<<<< HEAD
 			  $(".nuevoMaterial").append(
 
 				'<div class="row" style="padding:5px 15px">'+
@@ -148,6 +149,57 @@ $(".tablaOrden tbody").on("click", "button.agregarMaterial", function(){
 			  listarProductos();
   }
   
+=======
+          	$(".nuevoMaterial").append(
+
+          	'<div class="row" style="padding:5px 15px">'+
+
+			  '<!-- Nombre del material -->'+
+	          
+	          '<div class="col-xs-6" style="padding-right:0px">'+
+	          
+	            '<div class="input-group">'+
+	              
+	              '<span class="input-group-addon"><button type="button" class="btn btn-danger btn-xs quitarMaterial" idMaterial="'+idMaterial+'"><i class="fa fa-times"></i></button></span>'+
+
+	              '<input type="text" class="form-control nuevaNombreMaterial" idMaterial="'+idMaterial+'" name="agregarMaterial" value="'+nombre+'" readonly required>'+
+
+	            '</div>'+
+
+	          '</div>'+
+
+	          '<!-- Cantidad del material -->'+
+
+	          '<div class="col-xs-3">'+
+	            
+	             '<input type="number" class="form-control nuevaCantidadMaterial" name="nuevaCantidadMaterial" min="1" value="1" stock="'+stock+'" nuevoStock="'+Number(stock-1)+'" required>'+
+
+	          '</div>' +
+	             
+	          '</div>'+
+
+	        '</div>')
+
+	        // AGRUPAR PRODUCTOS EN FORMATO JSON
+
+	        listarMaterial()
+
+
+			localStorage.removeItem("quitarMaterial");
+
+      	}
+
+     })
+
+});
+
+function cambios(){
+
+	        // AGRUPAR PRODUCTOS EN FORMATO JSON
+
+	        listarMaterial();
+}
+>>>>>>> fernando
 
 /*=============================================
 CUANDO CARGUE LA TABLA CADA VEZ QUE NAVEGUE EN ELLA
@@ -227,7 +279,12 @@ AGREGANDO PRODUCTOS DESDE EL BOTÓN PARA DISPOSITIVOS
 var numMaterial = 0;
 
 $(".btnAgregarProduct").click(function(){
+<<<<<<< HEAD
     numMaterial ++;
+=======
+
+	numMaterial ++;
+>>>>>>> fernando
 
 	var datos = new FormData();
 	datos.append("traerMaterial", "ok");
@@ -408,12 +465,21 @@ function listarMaterial(){
 /*=============================================
 BOTON EDITAR VENTA
 =============================================*/
+<<<<<<< HEAD
 $(".tablas").on("click", ".btnEditarOrdentrabajo", function(){
 
 	var idOrdentrabajo = $(this).attr("idOrdentrabajo");
 	
 
 	window.location = "index.php?ruta=editar-ordentrabajo&idOrdentrabajo="+idOrdentrabajo;
+=======
+$(".tablas").on("click", ".btnEditarVenta", function(){
+
+	var idVenta = $(this).attr("idVenta");
+
+	window.location = "index.php?ruta=editar-venta&idVenta="+idVenta;
+
+>>>>>>> fernando
 
 })
 
@@ -464,23 +530,40 @@ $('.tablaOrden').on( 'draw.dt', function(){
 /*=============================================
 BORRAR VENTA
 =============================================*/
+<<<<<<< HEAD
 $(".tablas").on("click", ".btnEliminarOrdentrabajo", function(){
 
   var idOrdentrabajo = $(this).attr("idOrdentrabajo");
 
   swal({
         title: '¿Está seguro de borrar la orden de trabajo?',
+=======
+$(".tablas").on("click", ".btnEliminarVenta", function(){
+
+  var idVenta = $(this).attr("idVenta");
+
+  swal({
+        title: '¿Está seguro de borrar la venta?',
+>>>>>>> fernando
         text: "¡Si no lo está puede cancelar la accíón!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         cancelButtonText: 'Cancelar',
+<<<<<<< HEAD
         confirmButtonText: 'Si, borrar Orden!'
       }).then(function(result){
         if (result.value) {
           
             window.location = "index.php?ruta=ordentrabajo&idOrdentrabajo="+idOrdentrabajo;
+=======
+        confirmButtonText: 'Si, borrar venta!'
+      }).then(function(result){
+        if (result.value) {
+          
+            window.location = "index.php?ruta=ventas&idVenta="+idVenta;
+>>>>>>> fernando
         }
 
   })
@@ -488,10 +571,41 @@ $(".tablas").on("click", ".btnEliminarOrdentrabajo", function(){
 })
 
 /*=============================================
+<<<<<<< HEAD
 RANGO DE FECHAS
 =============================================*/
 
 $('#date-btn').daterangepicker(
+=======
+IMPRIMIR FACTURA
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirFactura", function(){
+
+	var codigoVenta = $(this).attr("codigoVenta");
+
+	window.open("extensiones/tcpdf/pdf/factura.php?codigo="+codigoVenta, "_blank"); 
+
+})
+
+/*=============================================
+IMPRIMIR Ticket
+=============================================*/
+
+$(".tablas").on("click", ".btnImprimirTicket", function(){
+
+	var codigoVenta = $(this).attr("codigoVenta");
+
+	window.open("extensiones/tcpdf/pdf/ticket.php?codigo="+codigoVenta, "_blank"); 
+
+})
+
+/*=============================================
+RANGO DE FECHAS
+=============================================*/
+
+$('#daterange-btn').daterangepicker(
+>>>>>>> fernando
   {
     ranges   : {
       'Hoy'       : [moment(), moment()],
@@ -505,6 +619,7 @@ $('#date-btn').daterangepicker(
     endDate  : moment()
   },
   function (start, end) {
+<<<<<<< HEAD
     $('#date-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
 
     var fechaIni = start.format('YYYY-MM-DD');
@@ -516,6 +631,19 @@ $('#date-btn').daterangepicker(
    	localStorage.setItem("capturar", capturarRango);
 
    	window.location = "index.php?ruta=ordentrabajo&fechaIni="+fechaIni+"&fechaFin="+fechaFin;
+=======
+    $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+
+    var fechaInicial = start.format('YYYY-MM-DD');
+
+    var fechaFinal = end.format('YYYY-MM-DD');
+
+    var capturarRango = $("#daterange-btn span").html();
+   
+   	localStorage.setItem("capturarRango", capturarRango);
+
+   	window.location = "index.php?ruta=ventas&fechaInicial="+fechaInicial+"&fechaFinal="+fechaFinal;
+>>>>>>> fernando
 
   }
 
@@ -527,9 +655,15 @@ CANCELAR RANGO DE FECHAS
 
 $(".daterangepicker.opensleft .range_inputs .cancelBtn").on("click", function(){
 
+<<<<<<< HEAD
 	localStorage.removeItem("capturar");
 	localStorage.clear();
 	window.location = "ordentrabajo";
+=======
+	localStorage.removeItem("capturarRango");
+	localStorage.clear();
+	window.location = "ventas";
+>>>>>>> fernando
 })
 
 /*=============================================
@@ -550,6 +684,7 @@ $(".daterangepicker.opensleft .ranges li").on("click", function(){
 
 		// if(mes < 10){
 
+<<<<<<< HEAD
 		// 	var fechaIni = año+"-0"+mes+"-"+dia;
 		// 	var fechaFin = año+"-0"+mes+"-"+dia;
 
@@ -567,23 +702,52 @@ $(".daterangepicker.opensleft .ranges li").on("click", function(){
 
 		// 	var fechaIni = año+"-"+mes+"-"+dia;
 	 //    	var fechaFin = año+"-"+mes+"-"+dia;
+=======
+		// 	var fechaInicial = año+"-0"+mes+"-"+dia;
+		// 	var fechaFinal = año+"-0"+mes+"-"+dia;
+
+		// }else if(dia < 10){
+
+		// 	var fechaInicial = año+"-"+mes+"-0"+dia;
+		// 	var fechaFinal = año+"-"+mes+"-0"+dia;
+
+		// }else if(mes < 10 && dia < 10){
+
+		// 	var fechaInicial = año+"-0"+mes+"-0"+dia;
+		// 	var fechaFinal = año+"-0"+mes+"-0"+dia;
+
+		// }else{
+
+		// 	var fechaInicial = año+"-"+mes+"-"+dia;
+	 //    	var fechaFinal = año+"-"+mes+"-"+dia;
+>>>>>>> fernando
 
 		// }
 
 		dia = ("0"+dia).slice(-2);
 		mes = ("0"+mes).slice(-2);
 
+<<<<<<< HEAD
 		var fechaIni = año+"-"+mes+"-"+dia;
 		var fechaFin= año+"-"+mes+"-"+dia;	
 
     	localStorage.setItem("capturar", "Hoy");
 
     	window.location = "index.php?ruta=ordentrabajo&fechaIni="+fechaIni+"&fechaFin="+fechaFin;
+=======
+		var fechaInicial = año+"-"+mes+"-"+dia;
+		var fechaFinal = año+"-"+mes+"-"+dia;	
+
+    	localStorage.setItem("capturarRango", "Hoy");
+
+    	window.location = "index.php?ruta=ventas&fechaInicial="+fechaInicial+"&fechaFinal="+fechaFinal;
+>>>>>>> fernando
 
 	}
 
 })
 
+<<<<<<< HEAD
 $(".tablas").on("click", ".btnDetalle", function(){
 
 	var idOrdentrabajo = $(this).attr("idOrdentrabajo");
@@ -592,6 +756,8 @@ $(".tablas").on("click", ".btnDetalle", function(){
 
 })
 
+=======
+>>>>>>> fernando
 /*=============================================
 ABRIR ARCHIVO XML EN NUEVA PESTAÑA
 =============================================*/

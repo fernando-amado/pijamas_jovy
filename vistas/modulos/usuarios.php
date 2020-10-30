@@ -58,7 +58,10 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
            <th style="width:10px">#</th>
            <th>Nombre</th>
            <th>Usuario</th>
+<<<<<<< HEAD
            <th>Correo Electronico</th>
+=======
+>>>>>>> fernando
            <th>Foto</th>
            <th>Perfil</th>
            <th>Estado</th>
@@ -83,8 +86,12 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
           echo ' <tr>
                   <td>'.($key+1).'</td>
                   <td>'.$value["nombre"].'</td>
+<<<<<<< HEAD
                   <td>'.$value["usuario"].'</td>
                   <td>'.$value["correo"].'</td>';
+=======
+                  <td>'.$value["usuario"].'</td>';
+>>>>>>> fernando
 
                   if($value["foto"] != ""){
 
@@ -145,7 +152,11 @@ MODAL AGREGAR USUARIO
 
 <div id="modalAgregarUsuario" class="modal fade" role="dialog">
   
+<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
+=======
+  <div class="modal-dialog" style="width: 500px;">
+>>>>>>> fernando
 
     <div class="modal-content">
 
@@ -155,11 +166,19 @@ MODAL AGREGAR USUARIO
         CABEZA DEL MODAL
         ======================================-->
 
+<<<<<<< HEAD
         <div class="modal-header" >
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
           <h4 class="modal-title" >Agregar usuario</h4>
+=======
+        <div class="modal-header" style="background:#3c8dbc; color:white">
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title">Agregar usuario</h4>
+>>>>>>> fernando
 
         </div>
 
@@ -177,7 +196,11 @@ MODAL AGREGAR USUARIO
 
               <input type="file" class=" nuevaFoto" name="nuevaFoto" style="width: 102px; background:#000; position: absolute; top:215px; left: 40%;">
 
+<<<<<<< HEAD
               <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="200px" style="position:relative; left:24%; top:-10px;" >
+=======
+              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="200px" style="position:relative; left:27%; top:-10px;" >
+>>>>>>> fernando
 
             </div>
 
@@ -188,6 +211,11 @@ MODAL AGREGAR USUARIO
             <div class="form-group">
               
               <div class="input-group">
+<<<<<<< HEAD
+=======
+              
+                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+>>>>>>> fernando
 
                 <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
 
@@ -200,6 +228,7 @@ MODAL AGREGAR USUARIO
              <div class="form-group">
               
               <div class="input-group">
+<<<<<<< HEAD
 
                 <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
 
@@ -214,6 +243,12 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <input type="text" class="form-control input-lg" name="nuevoCorreo" placeholder="Ingresar correo electronico" id="nuevoCorreo" required>
+=======
+              
+                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
+>>>>>>> fernando
 
               </div>
 
@@ -224,6 +259,11 @@ MODAL AGREGAR USUARIO
              <div class="form-group">
               
               <div class="input-group">
+<<<<<<< HEAD
+=======
+              
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+>>>>>>> fernando
 
                 <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" required>
 
@@ -235,7 +275,13 @@ MODAL AGREGAR USUARIO
 
             <div class="form-group">
               
+<<<<<<< HEAD
               <div class="input-group"> 
+=======
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-users"></i></span> 
+>>>>>>> fernando
 
                 <select class="form-control input-lg" name="nuevoPerfil">
                   
@@ -289,7 +335,11 @@ MODAL EDITAR USUARIO
 
 <div id="modalEditarUsuario" class="modal fade" role="dialog">
   
+<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
+=======
+  <div class="modal-dialog" style="width: 500px;">
+>>>>>>> fernando
 
     <div class="modal-content">
 
@@ -299,7 +349,11 @@ MODAL EDITAR USUARIO
         CABEZA DEL MODAL
         ======================================-->
 
+<<<<<<< HEAD
         <div class="modal-header" >
+=======
+        <div class="modal-header" style="background:#3c8dbc; color:white">
+>>>>>>> fernando
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -321,7 +375,11 @@ MODAL EDITAR USUARIO
 
               <input type="file" class="nuevaFoto" name="editarFoto" style="width: 102px; background:#000; position: absolute; top:215px; left: 40%;">
 
+<<<<<<< HEAD
               <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="200px" style="position:relative; left:24%; top:-10px;">
+=======
+              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="200px" style="position:relative; left:27%; top:-10px;">
+>>>>>>> fernando
 
               <input type="hidden" name="fotoActual" id="fotoActual">
 
@@ -334,19 +392,32 @@ MODAL EDITAR USUARIO
             <div class="form-group">
               
               <div class="input-group">
+<<<<<<< HEAD
+=======
+              
+                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+>>>>>>> fernando
 
                 <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" required>
 
               </div>
 
             </div>
+<<<<<<< HEAD
             
+=======
+>>>>>>> fernando
 
             <!-- ENTRADA PARA EL USUARIO -->
 
              <div class="form-group">
               
               <div class="input-group">
+<<<<<<< HEAD
+=======
+              
+                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
+>>>>>>> fernando
 
                 <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario" value="" readonly>
 
@@ -354,6 +425,7 @@ MODAL EDITAR USUARIO
 
             </div>
 
+<<<<<<< HEAD
             <!-- ENTRADA PARA EL CORREO -->
 
             <div class="form-group">
@@ -361,6 +433,19 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <input type="email" class="form-control input-lg" id="editarCorreo" name="editarCorreo" value="" required>
+=======
+            <!-- ENTRADA PARA LA CONTRASEÑA -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+
+                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña">
+
+                <input type="hidden" id="passwordActual" name="passwordActual">
+>>>>>>> fernando
 
               </div>
 
@@ -371,6 +456,11 @@ MODAL EDITAR USUARIO
             <div class="form-group">
               
               <div class="input-group">
+<<<<<<< HEAD
+=======
+              
+                <span class="input-group-addon"><i class="fa fa-users"></i></span> 
+>>>>>>> fernando
 
                 <select class="form-control input-lg" name="editarPerfil">
                   

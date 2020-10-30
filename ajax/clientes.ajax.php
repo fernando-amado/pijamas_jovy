@@ -23,6 +23,7 @@ class AjaxClientes{
 
 	}
 
+<<<<<<< HEAD
 	
 	/*=============================================
 	VALIDAR NO REPETIR USUARIO
@@ -61,6 +62,10 @@ class AjaxClientes{
 
 
 
+=======
+}
+
+>>>>>>> fernando
 /*=============================================
 EDITAR CLIENTE
 =============================================*/	
@@ -71,6 +76,7 @@ if(isset($_POST["idCliente"])){
 	$cliente -> idCliente = $_POST["idCliente"];
 	$cliente -> ajaxEditarCliente();
 
+<<<<<<< HEAD
 }
 
 /*=============================================
@@ -95,4 +101,6 @@ if(isset( $_POST["validarDocumento"])){
 	$valDocumento -> validarDocumento = $_POST["validarDocumento"];
 	$valDocumento -> ajaxValidarDocumento();
 
+=======
+>>>>>>> fernando
 }

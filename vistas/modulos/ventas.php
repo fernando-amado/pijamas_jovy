@@ -164,9 +164,15 @@ if($xml){
 
                       </button>
                         
+<<<<<<< HEAD
                       <button class="btn btn-info btnImprimirFactura "  codigoVenta="'.$value["codigo"].'">
 
                         <i class="fa fa-eye"></i>
+=======
+                      <button class="btn btn-info"  data-toggle="modal" data-target="#viewModal" codigoVenta="'.$value["codigo"].'">
+
+                        <i class="fa fa-print"></i>PDF
+>>>>>>> fernando
 
                       </button>';
 
@@ -183,7 +189,11 @@ if($xml){
                   </td>
 
                 </tr>';
+<<<<<<< HEAD
                   }
+=======
+            }
+>>>>>>> fernando
 
         ?>
                
@@ -191,16 +201,26 @@ if($xml){
 
        </table>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fernando
        <?php
 
       $eliminarVenta = new ControladorVentas();
       $eliminarVenta -> ctrEliminarVenta();
 
       ?>
+<<<<<<< HEAD
 
 <div class="modal fade" id="viewModal">
+=======
+       
+
+      </div>
+      <div class="modal fade" id="viewModal">
+>>>>>>> fernando
     <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header bg-info text-white">
@@ -210,6 +230,7 @@ if($xml){
           </button>
         </div>
         <div class="modal-body">
+<<<<<<< HEAD
         <div class="box">
 
 <?php
@@ -395,10 +416,56 @@ ENTRADA MÉTODO DE PAGO
   </div>
 
       </div>
+=======
+        <?php
+        
+
+$itemVenta = "codigo";
+$valorVenta = "codigo";
+
+$respuestaVenta = ControladorVentas::ctrMostrarVentas($itemVenta, $valorVenta); 
+
+$productos = json_decode($respuestaVenta["productos"], true);
+
+foreach ($productos as $key => $item) {
+
+  $itemProducto = "descripcion";
+  $valorProducto = $item["descripcion"];
+  $orden = null;
+  
+  $respuestaProducto = ControladorProductos::ctrMostrarProductos($itemProducto, $valorProducto, $orden);
+  
+  $valorUnitario = number_format($respuestaProducto["precio_venta"], 2);
+  
+  $precioTotal = number_format($item["total"], 2); 
+
+                ?>
+          <div class="row">
+            <div class="col-sm-5 col-xs-6 tital " >
+            </div>
+            <div class="col-sm-7 col-xs-6 ">
+           <?php echo ' <td style="border: 1px solid #666; color:#333; background-color:white; width:260px; text-align:center">'.$item[descripcion].'</td>';?>
+            </div>          
+          </div>
+          <br>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+>>>>>>> fernando
 
     </div>
 
 
+<<<<<<< HEAD
+=======
+  </section>
+
+>>>>>>> fernando
 </div>
 
 

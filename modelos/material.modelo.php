@@ -1,8 +1,13 @@
 <?php
 
 require_once "conexion.php";
+<<<<<<< HEAD
 
 class ModeloMaterial{
+=======
+use \Modelos\Conexion;
+class ModeloMaterial extends Conexion{
+>>>>>>> fernando
 
 	/*=============================================
 	MOSTRAR PRODUCTOS

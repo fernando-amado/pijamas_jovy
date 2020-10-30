@@ -314,6 +314,11 @@ if($_SESSION["perfil"] == "Especial"){
 
 
       </div>
+<<<<<<< HEAD
+=======
+
+    </div>
+>>>>>>> fernando
    
   </section>
 

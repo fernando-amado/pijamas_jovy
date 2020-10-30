@@ -5,7 +5,10 @@ use Mike42\Escpos\EscposImage;
 use Mike42\Escpos\PrintConnectors\FilePrintConnector;
 use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fernando
 class ControladorOrdentrabajo{
 
 	/*=============================================
@@ -100,6 +103,7 @@ class ControladorOrdentrabajo{
 
 			$respuesta = ModeloOrdentrabajo::mdlIngresarOrdentrabajo($tabla, $datos);
 
+<<<<<<< HEAD
 
 
 			if($respuesta == "ok"){
@@ -108,6 +112,16 @@ class ControladorOrdentrabajo{
 				echo'<script>
 
 				localStorage.removeItem("rango");
+=======
+			if($respuesta == "ok"){
+
+				
+
+	
+				echo'<script>
+
+				localStorage.removeItem("mate");
+>>>>>>> fernando
 
 				swal({
 					  type: "success",
@@ -235,7 +249,10 @@ class ControladorOrdentrabajo{
 			$datos = array("id_usuario"=>$_POST["idUsuario"],
 						   "codigo"=>$_POST["editarOrdentrabajo"],
 						   "material"=>$listaMaterial,
+<<<<<<< HEAD
 						   
+=======
+>>>>>>> fernando
 						   "cantidad_solicitada"=>$_POST["editarCantidadsolicitada"],
 						   "cantidad_entregada"=>$_POST["editarCantidadentregada"],
 						   "fecha_entrega"=>$_POST["editarFechaentrega"]);
@@ -323,7 +340,11 @@ class ControladorOrdentrabajo{
 			ELIMINAR VENTA
 			=============================================*/
 
+<<<<<<< HEAD
 			$respuesta = ModeloOrdentrabajo::mdlEliminarOrdentrabajo($tabla, $_GET["idOrdentrabajo"]);
+=======
+			$respuesta = ModeloMaterial::mdlEliminarMaterial($tabla, $_GET["idMaterial"]);
+>>>>>>> fernando
 
 			if($respuesta == "ok"){
 
@@ -353,11 +374,19 @@ class ControladorOrdentrabajo{
 	RANGO FECHAS
 	=============================================*/	
 
+<<<<<<< HEAD
 	static public function ctrRangoFechasOrdentrabajo($fechaIni, $fechaFin){
 
 		$tabla = "ordentrabajo";
 
 		$respuesta = ModeloOrdentrabajo::mdlRangoFechasOrdentrabajo($tabla, $fechaIni, $fechaFin);
+=======
+	static public function ctrRangoFechasOrdentrabajo($fechaInicial, $fechaFinal){
+
+		$tabla = "ordentrabajo";
+
+		$respuesta = ModeloOrdentrabajo::mdlRangoFechasOrdentrabajo($tabla, $fechaInicial, $fechaFinal);
+>>>>>>> fernando
 
 		return $respuesta;
 		

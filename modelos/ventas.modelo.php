@@ -1,8 +1,13 @@
 <?php
 
 require_once "conexion.php";
+<<<<<<< HEAD
 
 class ModeloVentas{
+=======
+use \Modelos\Conexion;
+class ModeloVentas extends Conexion{
+>>>>>>> fernando
 
 	/*=============================================
 	MOSTRAR VENTAS

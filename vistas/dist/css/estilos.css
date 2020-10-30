@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fernando
 table{
     text-align: center;
 }
@@ -231,6 +235,7 @@ tbody tr:nth-child(odd) {
       color: #fff;
       background-color: rgba(255, 255, 255, 0.075); }
 
+<<<<<<< HEAD
       .input-lg{
         height: 46px;
         font-size: 16px;
@@ -271,3 +276,8 @@ tbody tr:nth-child(odd) {
   color: #fff;
   opacity: .8;
 }
+=======
+      
+
+    
+>>>>>>> fernando

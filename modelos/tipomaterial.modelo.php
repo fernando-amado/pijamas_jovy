@@ -1,8 +1,13 @@
 <?php
 
 require_once "conexion.php";
+<<<<<<< HEAD
 
 class ModeloTipomaterial{
+=======
+use \Modelos\Conexion;
+class ModeloTipomaterial extends Conexion{
+>>>>>>> fernando
 
 	/*=============================================
 	CREAR CATEGORIA
