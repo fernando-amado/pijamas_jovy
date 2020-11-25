@@ -90,11 +90,7 @@ MODAL AGREGAR PRODUCTO
 
 <div id="modalAgregarMaterial" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog"  style="width: 450px;">
-=======
-  <div class="modal-dialog"  style="width: 500px;">
->>>>>>> fernando
 
     <div class="modal-content">
 
@@ -104,11 +100,7 @@ MODAL AGREGAR PRODUCTO
         CABEZA DEL MODAL
         ======================================-->
 
-<<<<<<< HEAD
         <div class="modal-header" >
-=======
-        <div class="modal-header" style="background:#3c8dbc; color:white">
->>>>>>> fernando
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -142,11 +134,6 @@ MODAL AGREGAR PRODUCTO
             <div class="form-group">
               
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
->>>>>>> fernando
 
                 <select class="form-control input-lg" id="nuevoTipomaterial" name="nuevoTipomaterial" required>
                   
@@ -177,11 +164,6 @@ MODAL AGREGAR PRODUCTO
             <div class="form-group">
               
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-code"></i></span> 
->>>>>>> fernando
 
                 <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
 
@@ -194,11 +176,6 @@ MODAL AGREGAR PRODUCTO
              <div class="form-group">
               
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
->>>>>>> fernando
 
                 <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
 
@@ -211,11 +188,6 @@ MODAL AGREGAR PRODUCTO
              <div class="form-group">
               
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
->>>>>>> fernando
 
                 <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Cantidad" required>
 
@@ -259,11 +231,7 @@ MODAL EDITAR PRODUCTO
 
 <div id="modalEditarMaterial" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
-=======
-  <div class="modal-dialog" style="width: 500px;">
->>>>>>> fernando
 
     <div class="modal-content">
 
@@ -273,11 +241,7 @@ MODAL EDITAR PRODUCTO
         CABEZA DEL MODAL
         ======================================-->
 
-<<<<<<< HEAD
         <div class="modal-header">
-=======
-        <div class="modal-header" style="background:#3c8dbc; color:white">
->>>>>>> fernando
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -299,7 +263,7 @@ MODAL EDITAR PRODUCTO
 
               <input type="file" class="nuevaImagen" name="editarImagen" style="width: 102px; background:#000; position: absolute; top:215px; left: 39%;">
 
-              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="200px" style="position:relative; left:27%; top:-10px;">
+              <img src="vistas/img/material/default/anonymous.png" class="img-thumbnail previsualizar" width="200px" style="position:relative; left:27%; top:-10px;">
 
               <input type="hidden" name="imagenActual" id="imagenActual">
 
@@ -313,11 +277,6 @@ MODAL EDITAR PRODUCTO
             <div class="form-group">
               
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
->>>>>>> fernando
 
                 <select class="form-control input-lg"  name="editarTipomaterial" readonly required>
                   
@@ -348,11 +307,6 @@ MODAL EDITAR PRODUCTO
             <div class="form-group">
               
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-code"></i></span> 
->>>>>>> fernando
 
                 <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" readonly required>
 
@@ -364,13 +318,7 @@ MODAL EDITAR PRODUCTO
 
              <div class="form-group">
               
-<<<<<<< HEAD
               <div class="input-group"> 
-=======
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
->>>>>>> fernando
 
                 <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" required>
 
@@ -383,11 +331,6 @@ MODAL EDITAR PRODUCTO
              <div class="form-group">
               
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
->>>>>>> fernando
 
                 <input type="number" class="form-control input-lg" id="editarStock" name="editarStock" min="0" required>
 

@@ -1,29 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 class ControladorUsuarios{
-=======
-use Modelos\ModeloUsuarios;
-use Libs\Helper;
-use Core\Controller;
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
-require 'Core/Controller.php';
-require 'libs/helper.php';
-
-class ControladorUsuarios extends Controller{
-
-	 //Llamado plantilla principal
-	 public function Index(){
-        
-        require_once 'vistas/modulos/login/recuperacion.php';
-        
-    }
->>>>>>> fernando
 
 	/*=============================================
 	INGRESO DE USUARIO
@@ -86,8 +63,17 @@ class ControladorUsuarios extends Controller{
 						
 					}else{
 
-						echo '<br>
-							<div class="alert alert-danger">El usuario aún no está activado</div>';
+						echo '<script>
+
+						swal({
+							  type: "error",
+							  title: "Ocurrio un error al ingresar",
+							  text: "El usuario esta desactivado en el sistema",
+							  showConfirmButton: false,
+							  timer: 2300
+							  })
+		
+						</script>';
 
 					}		
 
@@ -121,11 +107,7 @@ class ControladorUsuarios extends Controller{
 
 		if(isset($_POST["nuevoUsuario"])){
 
-<<<<<<< HEAD
 			if(preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoNombre"]) &&
-=======
-			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoNombre"]) &&
->>>>>>> fernando
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["nuevoUsuario"]) &&
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["nuevoPassword"])){
 
@@ -201,23 +183,15 @@ class ControladorUsuarios extends Controller{
 				$encriptar = crypt($_POST["nuevoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
 				$datos = array("nombre" => $_POST["nuevoNombre"],
-<<<<<<< HEAD
 							   "usuario" => $_POST["nuevoUsuario"],
 							   "correo" => $_POST["nuevoCorreo"],
-=======
-					           "usuario" => $_POST["nuevoUsuario"],
->>>>>>> fernando
 					           "password" => $encriptar,
 					           "perfil" => $_POST["nuevoPerfil"],
 					           "foto"=>$ruta);
 
 				$respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos);
-<<<<<<< HEAD
 
 
-=======
-			
->>>>>>> fernando
 				if($respuesta == "ok"){
 
 					echo '<script>
@@ -253,11 +227,7 @@ class ControladorUsuarios extends Controller{
 					swal({
 
 						type: "error",
-<<<<<<< HEAD
 						title: "¡Hay campos que no coinciden con el formato!",
-=======
-						title: "¡El usuario no puede ir vacío o llevar caracteres especiales!",
->>>>>>> fernando
 						showConfirmButton: true,
 						confirmButtonText: "Cerrar"
 
@@ -283,198 +253,6 @@ class ControladorUsuarios extends Controller{
 	}
 
 	/*=============================================
-<<<<<<< HEAD
-=======
-	Plantilla
-	=============================================*/
-
-	public function template()
-    {
-        $this->render('login/template.php', 'Registrar Usuario', null, false);
-	}
-	/*=============================================
-	Enviar Correo Datos
-	=============================================*/
-
-	public function sendMail($correoElectronico, $nombre, $codigo)
-    {
-		require  'vendor/autoload.php';
-        $template = file_get_contents('vistas/modulos/login/template.php');
-        $template = str_replace("{{name}}", $nombre, $template);
-        $template = str_replace("{{action_url_2}}", '<b>http:'.URL.'/vistas/modulos/login/nuevaContraseña.php/'.$codigo.'</b>', $template);
-        $template = str_replace("{{action_url_1}}", 'http:'.URL.'/vistas/modulos/login/nuevaContraseña.php/'.$codigo, $template);
-        $template = str_replace("{{year}}", date('Y'), $template);
-        $template = str_replace("{{operating_system}}", Helper::getOS(), $template);
-        $template = str_replace("{{browser_name}}", Helper::getBrowser(), $template);
-
-        $mail = new PHPMailer(true);
-        $mail->CharSet = "UTF-8";
-
-        try {
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';  //gmail SMTP server
-            $mail->SMTPAuth = true;
-            $mail->Username = 'luisfernandoamado148@gmail.com';   //username
-            $mail->Password = 'fercho1000574148';   //password
-            $mail->SMTPSecure = 'ssl';
-            $mail->Port = 465;                    //smtp port
-
-            $mail->setFrom('phpminitest@gmail.com', 'Pijamas Jovy');
-            $mail->addAddress($correoElectronico, $nombre);
-
-            $mail->isHTML(true);
-
-            $mail->Subject = 'Recuperación de contraseña - Pijamas jovy';
-            $mail->Body    = $template;
-
-            if (!$mail->send()) {
-                return false;
-            } else {
-                return true;
-            }
-        } catch (Exception $e) {
-            return false;
-            // echo 'Message could not be sent.';
-            // echo 'Mailer Error: ' . $mail->ErrorInfo;
-        }
-	}
-
-
-	/*=============================================
-	Envio de correo  con codigo
-	=============================================*/
-	
-	public function sendRecoveryCode()
-    {
-        if (isset($_POST["txtCorreoElectronico"]) && trim($_POST["txtCorreoElectronico"] != '')) {
-            $correoElectronico = $_POST['txtCorreoElectronico'];
-            $codigo = $this->createRandomCode();
-            $fechaRecuperacion = date("Y-m-d H:i:s", strtotime('+24 hours'));
-            $userModel = new ModeloUsuarios();
-            $user = $userModel->getUserWithEmail($correoElectronico);
-
-            if ($user === false) {
-                $mensaje = 'El correo electrónico no se encuentra registrado en el sistema.';
-                $this->render('modulos/login/recuperacion', 'Recuperar Contraseña', array('mensaje' => $mensaje), false);
-            } else {
-                $respuesta = $userModel->recoverPassword($correoElectronico, $codigo, $fechaRecuperacion);
-            
-                if ($respuesta) {
-                    $this->sendMail($correoElectronico, $user->usuario, $codigo);
-                    
-                    $mensaje = 'Se ha enviado un correo electrónico con las instrucciones para el cambio de tu contraseña. Por favor verifica la información enviada.';
-                    $this->render('modulos/login/recuperacion', 'Recuperar Contraseña', array('mensaje' => $mensaje), false);
-                } else {
-                    $mensaje = 'No se recuperar la cuenta. Si los errores persisten comuniquese con el administrador del sitio.';
-                    $this->render('modulos/login/recuperacion', 'Recuperar Contraseña', array('mensaje' => $mensaje), false);
-                }
-            }
-        } else {
-            $mensaje = 'El campo de correo electrónico es requerido.';
-            $this->render('modulos/login/recuperacion', 'Recuperar Contraseña', array('mensaje' => $mensaje), false);
-        }
-	}
-
-	/*=============================================
-	Restriccion de codigo
-	=============================================*/
-	
-	public function newPassword($code = null)
-    {
-        if (isset($code)) {
-            // Instance new Model (Song)
-            $userModel = new ModeloUsuarios();
-            // do deleteSong() in model/model.php
-            $user = $userModel->getUserWithCode($code);
-
-            if ($user === false) {
-                $mensaje = 'El código de recuperación de contraseña no es valido. Por favor intenta de nuevo.';
-                $this->render('vistas/modulos/login/login/recuperar.php', 'Recuperar Contraseña', array('mensaje' => $mensaje), false);
-            } else {
-                $current = date("Y-m-d H:i:s");
-
-                if (strtotime($current) > strtotime($user->fechaRecuperacion)) {
-                    $mensaje = 'El código de recuperación de contraseña ha expirado. Por favor intenta de nuevo.';
-                    $this->render('vistas/modulos/login/login/recuperar.php', 'Recuperar Contraseña', array('mensaje' => $mensaje), false);
-                } else {
-                    $this->render('vistas/modulos/login/login/recuperar.php', 'Nueva Contraseña', array('user' =>  $user), false);
-                }
-            }
-        } else {
-            header('location: ' . URL);
-        }
-	}
-
-	/*=============================================
-	VERIFICACION DE CONTRASEÑA
-	=============================================*/
-	
-	public function updatePasswordWithCode()
-    {
-        if (isset($_POST['btnGuardar'])) {
-            $idUsuario = $_POST['txtIdUsuario'];
-            $contrasena = $_POST['txtContrasena'];
-            $repetirContrasena = $_POST['txtRepetirContrasena'];
-
-            if ($contrasena != $repetirContrasena) {
-
-                $user = new stdClass();
-                $user->idUsuario = $idUsuario;
-
-                $mensaje = 'Las contraseñas no coinciden. Por favor, verifique la información.';
-                $this->render('/modulos/login/nuevaContraseña', 'Registrar Usuario', array('user' => $user, 'mensaje' => $mensaje), false);
-                return;
-
-            } else {
-                $userModel = new ModeloUsuarios();
-
-                $contrasena = password_hash($_POST['txtContrasena'], PASSWORD_BCRYPT);
-
-                $resultado = $userModel->updatePasswordFromRecover($idUsuario, $contrasena);
-                if ($resultado != false) {
-                    
-                    $mensaje = 'Su contraseña ha sido cambiada con éxito.';
-                    $this->render('login', 'Iniciar Sesion', array('mensaje' => $mensaje), false);
-                    return;
-
-                } else {
-                    $user = new stdClass();
-                    $user->idUsuario = $idUsuario;
-                    $mensaje = 'Ocurrio un error al intentar cambiar la contraseña. Por favor, verifique la información.';
-                    $this->render('modulos/login/nuevaContraseña', 'Registrar Usuario', array('usuario' => $user, 'mensaje' => $mensaje), false);
-                    return;
-                }
-            }
-        }else{
-            header('location:'.URL);
-        }
-        
-    }
-
-	
-	/*=============================================
-	CREAR CODIGO ALEATORIO
-	=============================================*/
-	
-	public function createRandomCode()
-    {
-        $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789";
-        srand((double)microtime()*1000000);
-        $i = 0;
-        $pass = '' ;
-    
-        while ($i <= 7) {
-            $num = rand() % 33;
-            $tmp = substr($chars, $num, 1);
-            $pass = $pass . $tmp;
-            $i++;
-        }
-    
-        return time().$pass;
-    }
-
-	/*=============================================
->>>>>>> fernando
 	MOSTRAR USUARIO
 	=============================================*/
 
@@ -578,51 +356,10 @@ class ControladorUsuarios extends Controller{
 
 				$tabla = "usuarios";
 
-<<<<<<< HEAD
 
 				$datos = array("nombre" => $_POST["editarNombre"],
 							   "usuario" => $_POST["editarUsuario"],
 							   "correo" => $_POST["editarCorreo"],
-=======
-				if($_POST["editarPassword"] != ""){
-
-					if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["editarPassword"])){
-
-						$encriptar = crypt($_POST["editarPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
-
-					}else{
-
-						echo'<script>
-
-								swal({
-									  type: "error",
-									  title: "¡La contraseña no puede ir vacía o llevar caracteres especiales!",
-									  showConfirmButton: true,
-									  confirmButtonText: "Cerrar"
-									  }).then(function(result) {
-										if (result.value) {
-
-										window.location = "usuarios";
-
-										}
-									})
-
-						  	</script>';
-
-						  	return;
-
-					}
-
-				}else{
-
-					$encriptar = $_POST["passwordActual"];
-
-				}
-
-				$datos = array("nombre" => $_POST["editarNombre"],
-							   "usuario" => $_POST["editarUsuario"],
-							   "password" => $encriptar,
->>>>>>> fernando
 							   "perfil" => $_POST["editarPerfil"],
 							   "foto" => $ruta);
 
@@ -656,17 +393,196 @@ class ControladorUsuarios extends Controller{
 
 					swal({
 						  type: "error",
-<<<<<<< HEAD
 						  title: "¡¡Hay campos que no coinciden con el formato!!",
-=======
-						  title: "¡El nombre no puede ir vacío o llevar caracteres especiales!",
->>>>>>> fernando
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result) {
 							if (result.value) {
 
 							window.location = "usuarios";
+
+							}
+						})
+
+			  	</script>';
+
+			}
+
+		}
+
+	}
+
+		/*=============================================
+	EDITAR PERFIL DE USUARIO
+	=============================================*/
+
+	static public function ctrEditarPerfil(){
+
+		if(isset($_POST["perfilUsuario"])){
+
+			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["perfilNombre"])){
+
+				/*=============================================
+				VALIDAR IMAGEN
+				=============================================*/
+
+				$ruta = $_POST["fotoActualP"];
+
+				if(isset($_FILES["perfilFoto"]["tmp_name"]) && !empty($_FILES["perfilFoto"]["tmp_name"])){
+
+					list($ancho, $alto) = getimagesize($_FILES["perfilFoto"]["tmp_name"]);
+
+					$nuevoAncho = 500;
+					$nuevoAlto = 500;
+
+					/*=============================================
+					CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
+					=============================================*/
+
+					$directorio = "vistas/img/usuarios/".$_POST["perfilUsuario"];
+
+					/*=============================================
+					PRIMERO PREGUNTAMOS SI EXISTE OTRA IMAGEN EN LA BD
+					=============================================*/
+
+					if(!empty($_POST["fotoActualP"])){
+
+						unlink($_POST["fotoActualP"]);
+
+					}else{
+
+						mkdir($directorio, 0755);
+
+					}	
+
+					/*=============================================
+					DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
+					=============================================*/
+
+					if($_FILES["perfilFoto"]["type"] == "image/jpeg"){
+
+						/*=============================================
+						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+						=============================================*/
+
+						$aleatorio = mt_rand(100,999);
+
+						$ruta = "vistas/img/usuarios/".$_POST["perfilUsuario"]."/".$aleatorio.".jpg";
+
+						$origen = imagecreatefromjpeg($_FILES["perfilFoto"]["tmp_name"]);						
+
+						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+						imagejpeg($destino, $ruta);
+
+					}
+
+					if($_FILES["perfilFoto"]["type"] == "image/png"){
+
+						/*=============================================
+						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+						=============================================*/
+
+						$aleatorio = mt_rand(100,999);
+
+						$ruta = "vistas/img/usuarios/".$_POST["perfilUsuario"]."/".$aleatorio.".png";
+
+						$origen = imagecreatefrompng($_FILES["perfilFoto"]["tmp_name"]);						
+
+						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+						imagepng($destino, $ruta);
+
+					}
+
+				}
+
+				$tabla = "usuarios";
+
+				if($_POST["editarPassword"] != ""){
+
+					if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["editarPassword"])){
+
+						$encriptar = crypt($_POST["editarPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
+
+					}else{
+
+						echo'<script>
+
+								swal({
+									  type: "error",
+									  title: "¡La contraseña no puede ir vacía o llevar caracteres especiales!",
+									  showConfirmButton: true,
+									  confirmButtonText: "Cerrar"
+									  }).then(function(result) {
+										if (result.value) {
+
+										window.location = "salir";
+
+										}
+									})
+
+						  	</script>';
+
+						  	return;
+
+					}
+
+				}else{
+
+					$encriptar = $_POST["passwordActual"];
+
+				}
+
+
+				$datos = array("nombre" => $_POST["perfilNombre"],
+							   "usuario" => $_POST["perfilUsuario"],
+							   "correo" => $_POST["perfilCorreo"],
+							   "perfil" => $_POST["perfilPerfil"],
+							   "password" => $encriptar,
+							   "foto" => $ruta);
+
+				$respuesta = ModeloUsuarios::mdlEditarPerfil($tabla, $datos);
+
+				if($respuesta == "ok"){
+
+					echo'<script>
+
+					swal({
+						  type: "success",
+						  title: "Perfil del usuario modificado correctamente",
+						  showConfirmButton: true,
+						  confirmButtonText: "Cerrar"
+						  }).then(function(result) {
+									if (result.value) {
+
+									window.location = "salir";
+
+									}
+								})
+
+					</script>';
+
+				}
+
+
+			}else{
+
+				echo'<script>
+
+					swal({
+						  type: "error",
+						  title: "¡¡Hay campos que no coinciden con el formato!!",
+						  showConfirmButton: true,
+						  confirmButtonText: "Cerrar"
+						  }).then(function(result) {
+							if (result.value) {
+
+							window.location = "salir";
 
 							}
 						})

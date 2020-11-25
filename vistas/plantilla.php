@@ -31,20 +31,20 @@ session_start();
   <link rel="stylesheet" href="vistas/bower_components/Ionicons/css/ionicons.min.css">
 
   <!-- Theme style -->
+  <link rel="stylesheet" href="vistas/dist/css/diseño.css">
   <link rel="stylesheet" href="vistas/dist/css/AdminLTE.css">
   <link rel="stylesheet" href="vistas/dist/css/estilos.css">
   <link rel="stylesheet" href="vistas/dist/css/styles.css">
   
   <!-- AdminLTE Skins -->
   <link rel="stylesheet" href="vistas/dist/css/skins/_all-skins.css">
+  
 
   <!-- Google Font -->
-<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
-=======
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
->>>>>>> fernando
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
    <!-- DataTables -->
   <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
@@ -68,7 +68,10 @@ session_start();
   
   <!-- Bootstrap 3.3.7 -->
   <script src="vistas/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script  src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="vistas/dist/js/jquery.validate.min.js"></script>
+  <script src="vistas/dist/js/additional-methods.min.js"></script>
 
   <!-- FastClick -->
   <script src="vistas/bower_components/fastclick/lib/fastclick.js"></script>
@@ -118,18 +121,10 @@ session_start();
 CUERPO DOCUMENTO
 ======================================-->
 
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page" style="font-style: normal;">
  
   <?php
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> fernando
   if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
 
    echo '<div class="wrapper">';
@@ -164,19 +159,13 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "verventa" ||
          $_GET["ruta"] == "crear-venta" ||
          $_GET["ruta"] == "editar-venta" ||
-<<<<<<< HEAD
          $_GET["ruta"] == "detalleventa" ||
-=======
->>>>>>> fernando
          $_GET["ruta"] == "tipomaterial" ||
          $_GET["ruta"] == "material" ||
          $_GET["ruta"] == "ordentrabajo" ||
          $_GET["ruta"] == "crear-ordentrabajo" ||
-<<<<<<< HEAD
          $_GET["ruta"] == "editar-ordentrabajo" ||
          $_GET["ruta"] == "detalleorden" ||
-=======
->>>>>>> fernando
          $_GET["ruta"] == "reportes" ||
          $_GET["ruta"] == "salir"){
 
@@ -194,11 +183,8 @@ CUERPO DOCUMENTO
 
       include "modulos/inicio.php";
        
-<<<<<<< HEAD
     include "modulos/recuperacion.php";
       
-=======
->>>>>>> fernando
 
     }
 
@@ -212,20 +198,11 @@ CUERPO DOCUMENTO
     echo '</div>';
     
    
-<<<<<<< HEAD
    
   }else{
   
     include "modulos/login/login.php";
   }
-=======
-   }
-   else{
-  
-    include "modulos/login/login.php";
-  }
-
->>>>>>> fernando
   ?>
 
 <script src="vistas/js/plantilla.js"></script>
@@ -242,3 +219,25 @@ CUERPO DOCUMENTO
 </body>
 </html>
 
+<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $("#smart-form").validate({
+                errorClass: "state-error",
+                validClass: "state-success",
+                errorElement: "em",
+                highlight: function (element, errorClass, validClass) {
+                    $(element).closest('.field').addClass(errorClass).removeClass(validClass);
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).closest('.field').removeClass(errorClass).addClass(validClass);
+                },
+                errorPlacement: function (error, element) {
+                    if (element.is(":radio") || element.is(":checkbox")) {
+                        element.closest('.option-group').after(error);
+                    } else {
+                        error.insertAfter(element.parent());
+                    }
+                }
+            });
+        });
+    </script>

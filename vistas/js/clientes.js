@@ -32,7 +32,6 @@ $(".tablas").on("click", ".btnEditarCliente", function(){
 })
 
 /*=============================================
-<<<<<<< HEAD
 REVISAR SI EL NOMBRE YA ESTÁ REGISTRADO
 =============================================*/
 
@@ -105,8 +104,6 @@ $("#nuevoDocumentoId").change(function(){
 })
 
 /*=============================================
-=======
->>>>>>> fernando
 ELIMINAR CLIENTE
 =============================================*/
 $(".tablas").on("click", ".btnEliminarCliente", function(){

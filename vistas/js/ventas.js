@@ -534,24 +534,29 @@ $("#nuevoMetodoPago").change(function(){
 
 		 )
 
-		// Agregar formato al precio
-
-		$('#nuevoValorEfectivo').number( true, 2);
-      	$('#nuevoCambioEfectivo').number( true, 2);
-
-
-      	// Listar método en la entrada
-      	listarMetodos()
+		
 
 	}else{
 
-		$(this).parent().parent().removeClass('col-xs-4');
+		$(this).parent().parent().removeClass('col-xs-6');
 
-		$(this).parent().parent().addClass('col-xs-6');
+		$(this).parent().parent().addClass('col-xs-4');
 
 		 $(this).parent().parent().parent().children('.cajasMetodoPago').html(
+			
+			'<div class="col-xs-4">'+ 
 
-		 	'<div class="col-xs-6" style="padding-left:0px">'+
+			'<div class="input-group">'+ 
+
+				'<span class="input-group-addon"><i class="ion ion-social-usd"></i></span>'+ 
+
+				'<input type="text" class="form-control" id="nuevoValorEfectivo" placeholder="000000" required>'+
+
+			'</div>'+
+
+		'</div>'+
+
+		 	'<div class="col-xs-4" style="padding-left:0px">'+
                         
                 '<div class="input-group">'+
                      
@@ -563,6 +568,14 @@ $("#nuevoMetodoPago").change(function(){
 
               '</div>')
 
+			  // Agregar formato al precio
+
+		$('#nuevoValorEfectivo').number( true, 2);
+		$('#nuevoCambioEfectivo').number( true, 2);
+
+
+		// Listar método en la entrada
+		listarMetodos()
 	}
 
 	
@@ -735,19 +748,12 @@ $(".tablas").on("click", ".btnImprimirFactura", function(){
 
 	var codigoVenta = $(this).attr("codigoVenta");
 
-<<<<<<< HEAD
 	window.location = "index.php?ruta=detalleventa&codigoVenta="+codigoVenta;
 
 })
 
 
 
-=======
-	window.open("extensiones/tcpdf/pdf/factura.php?codigo="+codigoVenta, "_blank"); 
-
-})
-
->>>>>>> fernando
 /*=============================================
 IMPRIMIR Ticket
 =============================================*/

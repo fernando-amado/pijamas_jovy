@@ -5,10 +5,7 @@ use Mike42\Escpos\EscposImage;
 use Mike42\Escpos\PrintConnectors\FilePrintConnector;
 use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> fernando
 class ControladorOrdentrabajo{
 
 	/*=============================================
@@ -43,7 +40,7 @@ class ControladorOrdentrabajo{
 
 				swal({
 					  type: "error",
-					  title: "La orden no se ha ejecuta si no hay productos",
+					  title: "La orden no se ha ejecuta si no hay materiales",
 					  showConfirmButton: true,
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
@@ -70,21 +67,21 @@ class ControladorOrdentrabajo{
 				
 			   $tablaMaterial = "material";
 
-			    $item1 = "id";
-			    $valor1 = $value["id"];
-			    $orden1 = "id";
+			    $item = "id";
+			    $valor = $value["id"];
+			    $orden = "id";
 
-			    $traerMaterial = ModeloMaterial::mdlMostrarMaterial($tablaMaterial, $item1, $valor1, $orden1);
+			    $traerMaterial = ModeloMaterial::mdlMostrarMaterial($tablaMaterial, $item, $valor, $orden);
 
-				$item2 = "ordentrabajo";
-				$valor2 = $value["cantidad"] + $traerMaterial["ordentrabajo"];
+				$item1a = "ordentrabajo";
+				$valor1a = $value["cantidad"] + $traerMaterial["ordentrabajo"];
 
-			    $nuevasOrdenes = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item2, $valor2, $valor1);
+			    $nuevasOrdenes = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item1a, $valor1a, $valor);
 
-				$item3 = "stock";
-				$valor3 = $value["stock"];
+				$item1b = "stock";
+				$valor1b = $value["stock"];
 
-				$nuevoStock = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item3, $valor3, $valor1);
+				$nuevoStock = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item1b, $valor1b, $valor);
 
 			}
 
@@ -96,14 +93,14 @@ class ControladorOrdentrabajo{
 
 			$datos = array("id_usuario"=>$_POST["idUsuario"],
 						   "codigo"=>$_POST["nuevaOrdentrabajo"],
+						   "producto"=>$_POST["nuevaProducto"],
 						   "cantidad_solicitada"=>$_POST["nuevaCantidadsolicitada"],
+						   "material"=>$_POST["listaMaterial"],
 						   "cantidad_entregada"=>$_POST["nuevaCantidadentregada"],
-						   "fecha_entrega"=>$_POST["nuevaFechaentrega"],
-						   "material"=>$_POST["listaMaterial"]);
+						   "fecha_entrega"=>$_POST["nuevaFechaentrega"]);
 
 			$respuesta = ModeloOrdentrabajo::mdlIngresarOrdentrabajo($tabla, $datos);
 
-<<<<<<< HEAD
 
 
 			if($respuesta == "ok"){
@@ -112,16 +109,6 @@ class ControladorOrdentrabajo{
 				echo'<script>
 
 				localStorage.removeItem("rango");
-=======
-			if($respuesta == "ok"){
-
-				
-
-	
-				echo'<script>
-
-				localStorage.removeItem("mate");
->>>>>>> fernando
 
 				swal({
 					  type: "success",
@@ -196,15 +183,15 @@ class ControladorOrdentrabajo{
 
 					$traerMaterial = ModeloMaterial::mdlMostrarMaterial($tablaMaterial, $item, $valor, $orden);
 
-					$item2 = "ordentrabajo";
-					$valor2 = $traerMaterial["ordentrabajo"] - $value["cantidad"];
+					$item1a = "ordentrabajo";
+					$valor1a = $traerMaterial["ordentrabajo"] - $value["cantidad"];
 
-					$nuevasOrdenes = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item2, $valor2, $valor);
+					$nuevasOrdenes = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item1a, $valor1a, $valor);
 
-					$item3 = "stock";
-					$valor3 = $value["cantidad"] + $traerMaterial["stock"];
+					$item1b = "stock";
+					$valor1b = $value["cantidad"] + $traerMaterial["stock"];
 
-					$nuevoStock = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item3, $valor3, $valor);
+					$nuevoStock = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item1b, $valor1b, $valor);
 
 				}
 
@@ -228,15 +215,15 @@ class ControladorOrdentrabajo{
 
 					$traerMaterial_2 = ModeloMaterial::mdlMostrarMaterial($tablaMaterial_2, $item_2, $valor_2, $orden);
 
-					$item2_2 = "ordentrabajo";
-					$valor2_2 = $value["cantidad"] + $traerMaterial_2["ordentrabajo"];
+					$item1a_2 = "ordentrabajo";
+					$valor1a_2 = $value["cantidad"] + $traerMaterial_2["ordentrabajo"];
 
-					$nuevasOrdenes_2 = ModeloMaterial::mdlActualizarMaterial($tablaMaterial_2, $item2_2, $valor2_2, $valor_2);
+					$nuevasOrdenes_2 = ModeloMaterial::mdlActualizarMaterial($tablaMaterial_2, $item1a_2, $valor1a_2, $valor_2);
 
-					$item3_2 = "stock";
-					$valor3_2 = $value["stock"];
+					$item1b_2 = "stock";
+					$valor1b_2 = $value["stock"];
 
-					$nuevoStock_2 = ModeloMaterial::mdlActualizarMaterial($tablaMaterial_2, $item3_2, $valor3_2, $valor_2);
+					$nuevoStock_2 = ModeloMaterial::mdlActualizarMaterial($tablaMaterial_2, $item1b_2, $valor1b_2, $valor_2);
 
 				}
 
@@ -249,10 +236,8 @@ class ControladorOrdentrabajo{
 			$datos = array("id_usuario"=>$_POST["idUsuario"],
 						   "codigo"=>$_POST["editarOrdentrabajo"],
 						   "material"=>$listaMaterial,
-<<<<<<< HEAD
 						   
-=======
->>>>>>> fernando
+						   "producto"=>$_POST["editarProducto"],
 						   "cantidad_solicitada"=>$_POST["editarCantidadsolicitada"],
 						   "cantidad_entregada"=>$_POST["editarCantidadentregada"],
 						   "fecha_entrega"=>$_POST["editarFechaentrega"]);
@@ -324,15 +309,15 @@ class ControladorOrdentrabajo{
 
 				$traerMaterial = ModeloMaterial::mdlMostrarMaterial($tablaMaterial, $item, $valor, $orden);
 
-				$item2 = "ordentrabajo";
-				$valor2 = $traerMaterial["ordentrabajo"] - $value["cantidad"];
+				$item1a = "ordentrabajo";
+				$valor1a = $traerMaterial["ordentrabajo"] - $value["cantidad"];
 
-				$nuevasOrdenes = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item2, $valor2, $valor);
+				$nuevasOrdenes = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item1a, $valor1a, $valor);
 
-				$item3 = "stock";
-				$valor3 = $value["cantidad"] + $traerMaterial["stock"];
+				$item1b = "stock";
+				$valor1b = $value["cantidad"] + $traerMaterial["stock"];
 
-				$nuevoStock = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item3, $valor3, $valor);
+				$nuevoStock = ModeloMaterial::mdlActualizarMaterial($tablaMaterial, $item1b, $valor1b, $valor);
 
 			}
 
@@ -340,11 +325,7 @@ class ControladorOrdentrabajo{
 			ELIMINAR VENTA
 			=============================================*/
 
-<<<<<<< HEAD
 			$respuesta = ModeloOrdentrabajo::mdlEliminarOrdentrabajo($tabla, $_GET["idOrdentrabajo"]);
-=======
-			$respuesta = ModeloMaterial::mdlEliminarMaterial($tabla, $_GET["idMaterial"]);
->>>>>>> fernando
 
 			if($respuesta == "ok"){
 
@@ -374,19 +355,11 @@ class ControladorOrdentrabajo{
 	RANGO FECHAS
 	=============================================*/	
 
-<<<<<<< HEAD
 	static public function ctrRangoFechasOrdentrabajo($fechaIni, $fechaFin){
 
 		$tabla = "ordentrabajo";
 
 		$respuesta = ModeloOrdentrabajo::mdlRangoFechasOrdentrabajo($tabla, $fechaIni, $fechaFin);
-=======
-	static public function ctrRangoFechasOrdentrabajo($fechaInicial, $fechaFinal){
-
-		$tabla = "ordentrabajo";
-
-		$respuesta = ModeloOrdentrabajo::mdlRangoFechasOrdentrabajo($tabla, $fechaInicial, $fechaFinal);
->>>>>>> fernando
 
 		return $respuesta;
 		

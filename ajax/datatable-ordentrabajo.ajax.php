@@ -58,7 +58,7 @@ class TablaMaterialOrden{
  	 		TRAEMOS LAS ACCIONES
   			=============================================*/ 
 
-		  	$botones =  "<div class='btn-group'><button class='btn btn-primary agregarMaterial recuperarBoton' idMaterial='".$material[$i]["id"]."'>Agregar</button></div>"; 
+		  	$botones =  "<div class='btn-group'><button class='btn btn-primary agregarMaterial recuperarBoton' idMaterial='".$material[$i]["id"]."'>Agregar &nbsp;<i class='fa fa-plus-circle'></i></button></div>"; 
 
 		  	$datosJson .='[
 			      "'.($i+1).'",

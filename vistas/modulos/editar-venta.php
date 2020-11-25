@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> fernando
 <div class="content-wrapper">
 
   <section class="content-header">
@@ -268,7 +265,7 @@
                      <div class="input-group">
                   
                       <select class="form-control" id="nuevoMetodoPago" name="nuevoMetodoPago" required>
-                        <option value="">Seleccione método de pago</option>
+                        <option value="<?php echo $venta["metodo_pago"]; ?>"><?php echo $venta["metodo_pago"]; ?></option>
                         <option value="Efectivo">Efectivo</option>
                         <option value="TC">Tarjeta Crédito</option>
                         <option value="TD">Tarjeta Débito</option>                  
@@ -280,7 +277,7 @@
 
                   <div class="cajasMetodoPago"></div>
 
-                  <input type="hidden" id="listaMetodoPago" name="listaMetodoPago">
+                  <input type="hidden" id="listaMetodoPago" name="listaMetodoPago" >
 
                 </div>
 
@@ -326,10 +323,9 @@
                <thead>
 
                  <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Imagen</th>
                   <th>Código</th>
-                  <th>Descripcion</th>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
                   <th>Cantidad</th>
                   <th>Acciones</th>
                 </tr>

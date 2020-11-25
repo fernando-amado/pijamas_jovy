@@ -1,13 +1,8 @@
 <?php
 
 require_once "conexion.php";
-<<<<<<< HEAD
 
 class ModeloClientes{
-=======
-use \Modelos\Conexion;
-class ModeloClientes extends Conexion{
->>>>>>> fernando
 
 	/*=============================================
 	CREAR CLIENTE

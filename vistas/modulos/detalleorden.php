@@ -102,6 +102,18 @@
 
                 <div class="form-group">
 
+                <label>Nombre del Producto</label>
+                  
+                  <div class="input-group">
+
+                   <input type="text" class="form-control" id="editarProducto" name="editarProducto" value="<?php echo $ordentrabajo["producto"]; ?>" readonly>
+               
+                  </div>
+                
+                </div>
+
+                <div class="form-group">
+
                 <label>Cantidad Solicitada</label>
                   
                   <div class="input-group">
@@ -176,17 +188,13 @@
                           <input type="number" class="form-control nuevaCantidadMaterial" name="nuevaCantidadMaterial" min="1" value="'.$value["cantidad"].'" stock="'.$stockAntiguo.'" nuevoStock="'.$value["stock"].'" readonly >
 
                         </div>
-               
-                        </div>
 
                       </div>';
                 }
 
 
                 ?>
-
-                </div>
-
+</div>
                 <input type="hidden" id="listaMaterial" name="listaMaterial">
 
 
@@ -194,16 +202,18 @@
 
           <div class="box-footer">
 
-            <hr>
+            
 
           </div>
 
         </form>
 
-        <center><a href="ordentrabajo"><button class="btn btn-danger volver">Volver</button></a></center>
+        <center><a href="ordentrabajo"><button class="btn btn-danger volver" style="top:-30px;">Volver</button></a></center>
 
         </div>
-            
-      </div>
+
+</div>
+
+</div>
 
 </div>

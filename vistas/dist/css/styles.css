@@ -2,6 +2,7 @@
 /* GLOBALES */
 html {
     box-sizing: border-box;
+    font-style: normal;
 }
 
 *,
@@ -34,6 +35,7 @@ p {
 @media(max-width:480px) {
     .container {
         width: 95%;
+        
     }
 }
 
@@ -47,6 +49,18 @@ div.fond-pink {
     background-color:rgb(92, 187, 250) ;
     z-index: -2;
     animation: fondo 1.5s ease;
+}
+img.fondo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    filter: brightness(25%); 
+}
+
+.iniciar{
+    width: 100%;
 }
 
 div.fond-blue {
@@ -75,7 +89,7 @@ div.container-flex {
     top: 100px;
     height: 430px;
     margin: 0 auto;
-    box-shadow: 0 0 50px #494848;
+    box-shadow: 0 0 9px 0 rgb(237, 242, 247);
     border-radius: 20px;
 }
 
@@ -92,7 +106,7 @@ div.container-flex {
 div.caja1 {
     background-color: rgb(92, 187, 250);
     padding: 30px 30px;
-    width: 50%;
+    width: 47%;
     color: #ffffff;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;

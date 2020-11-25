@@ -8,10 +8,12 @@ $.ajax({
 	success:function(respuesta){
 		
 		console.log("respuesta", respuesta);
-
+		
 	}
+	
 
 })
+
 
 var perfilOculto = $("#perfilOculto").val();
 
@@ -44,8 +46,9 @@ $('.tablaProductos').DataTable( {
 				"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
 				"sSortDescending": ": Activar para ordenar la columna de manera descendente"
 			}
-
+        
 	}
+	
 
 } );
 
@@ -87,6 +90,7 @@ CAPTURANDO LA CATEGORIA PARA ASIGNAR CÓDIGO
 //   	})
 
 // })
+
 
 
 
@@ -206,11 +210,8 @@ $(".tablaProductos tbody").on("click", "button.btnEditarProducto", function(){
 
 })
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> fernando
 /*=============================================
 ELIMINAR PRODUCTO
 =============================================*/
@@ -244,4 +245,4 @@ $(".tablaProductos tbody").on("click", "button.btnEliminarProducto", function(){
 })
 
 
-	
+

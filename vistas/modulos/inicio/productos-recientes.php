@@ -21,6 +21,7 @@ h2 {
 
 img{
   width: 100% ;
+  
 }
 h2 b {
 	color: rgb(92, 187, 250); 
@@ -49,15 +50,17 @@ h2::after {
 	height: 322px;
 	width: 100%;
 	position: relative;
+	box-shadow: 0 0 9px 0 rgb(57, 152, 255);
 }
 .carousel .carousel-item img {	
-  max-width: 100%;  
-  max-height: 100%;
+  max-width: 320px;  
+  height: 320px;
 	display: inline-block;
 	bottom: 0;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
+	
 }
 .carousel .carousel-item h4 {
 	font-size: 18px;

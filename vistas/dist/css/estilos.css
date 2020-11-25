@@ -1,8 +1,10 @@
-
-<<<<<<< HEAD
-=======
-
->>>>>>> fernando
+.content {
+  background: #fff;
+}
+body{
+  background: #fff;
+  font-style: normal;
+}
 table{
     text-align: center;
 }
@@ -235,7 +237,6 @@ tbody tr:nth-child(odd) {
       color: #fff;
       background-color: rgba(255, 255, 255, 0.075); }
 
-<<<<<<< HEAD
       .input-lg{
         height: 46px;
         font-size: 16px;
@@ -267,17 +268,93 @@ tbody tr:nth-child(odd) {
   box-shadow: 0 0 9px 0 rgb(57, 152, 255);
 }
 
-.close{
+button.close{
   color: #fff;
   opacity: .5;
 }
 
-.close:hover{
+button.close:hover{
   color: #fff;
   opacity: .8;
 }
-=======
-      
 
-    
->>>>>>> fernando
+label{
+  font-size: 15.3px;
+  font-weight: 1000;
+}
+
+label.subir{
+  padding: 6px 12px;
+  background: #f55d3e;
+  color:#fff;
+  border:0px solid #fff;
+  position: relative;
+  top: 105px;
+  left: 36.5%;
+  
+}
+
+.subir:hover{
+  color:#fff;
+  background: #f7cb15;
+}
+
+
+.div1 {
+  overflow:scroll;
+     height:400px;
+     width:100%; 
+}
+
+.subirp{
+  padding: 5px 161px;
+  background: #f55d3e;
+  color:#fff;
+  border:0px solid #fff;
+  position: relative;
+  top: 440px;
+  left: 1%;
+  
+}
+
+.subirp:hover{
+  color:#fff;
+  background: #f7cb15;
+}
+
+h1{
+  font-family: 'Dosis', sans-serif;    
+}
+
+.content-header{
+  font-size: 50px;
+}
+
+label.subir{
+  
+  font-size: 15px;
+}
+
+.falso{
+  padding: 0;
+}
+
+.form-group p{
+  color: #595e63;
+  font-size: 15px;
+  padding:  0px;
+}
+
+em{
+  font-style: normal;
+}
+.alert{
+  padding: 10px;
+  border-radius: 0px;
+
+}
+.div2 { 
+  overflow:scroll;
+     height:590px;
+     width:102%; 
+}

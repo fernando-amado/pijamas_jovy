@@ -23,13 +23,6 @@ if($_SESSION["perfil"] == "Vendedor"){
     
     </h1>
 
-    <ol class="breadcrumb">
-      
-      <li><a href="inicio"><i class="fa fa-home"></i> Inicio</a></li>
-      
-      <li class="active">Administrar productos</li>
-    
-    </ol>
 
   </section>
 
@@ -41,7 +34,7 @@ if($_SESSION["perfil"] == "Vendedor"){
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarProducto">
           
-          Agregar producto
+          Agregar producto &nbsp; <i class="fa fa-plus-circle"></i>
 
         </button>
 
@@ -52,22 +45,21 @@ if($_SESSION["perfil"] == "Vendedor"){
        <table class="table table-bordered table-striped dt-responsive tablaProductos" width="100%">
          
         <thead>
-        <div class="well well-sm text-right" style="position:absolute; top: 0px; left:35%;">
+        <div class="well well-sm text-right" style="position:absolute; top: 0px; left:40%;">
 					            <a class=" btn btn-dark" href="vistas/reportes/producto.php" target="_blank"> Generar reporte </a>
-					            <a class=" btn btn-info" href="vistas/reportes/producto .php" download="reporteus">Descargar reporte </a>
+					            <a class=" btn btn-primary" href="vistas/reportes/producto .php" download="reporteus">Descargar reporte </a>
 				            </div>
 
          
          <tr>
            
            <th style="width:10px">#</th>
+           <th>Código de Referencia</th>
            <th>Imagen</th>
-           <th>Código</th>
            <th>Nombre</th>
            <th>Categoría</th>
            <th>Cantidad</th>
-           <th>Precio de venta</th>
-           <th>Agregado</th>
+           <th>Precio de venta</th> 
            <th>Acciones</th>
            
          </tr> 
@@ -92,11 +84,7 @@ MODAL AGREGAR PRODUCTO
 
 <div id="modalAgregarProducto" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog"  style="width: 450px;">
-=======
-  <div class="modal-dialog"  style="width: 500px;">
->>>>>>> fernando
 
     <div class="modal-content">
 
@@ -106,8 +94,7 @@ MODAL AGREGAR PRODUCTO
         CABEZA DEL MODAL
         ======================================-->
 
-        <div class="modal-header" style="background:#3c8dbc; color:white">
-
+        <div class="modal-header" >
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
           <h4 class="modal-title">Agregar producto</h4>
@@ -125,10 +112,12 @@ MODAL AGREGAR PRODUCTO
             <!-- ENTRADA PARA SUBIR FOTO -->
 
             <div class="form-group">
+            <label for="file-upload" class="subir">
+             <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+           </label>
+              <input type="file" id="file-upload" onchange='cambiar()' class="nuevaImagen" name="nuevaImagen" style="display: none;">
 
-              <input type="file" class="nuevaImagen" name="nuevaImagen" style="width: 102px; background:#000; position: relative; top:195px; left: 39%;">
-
-              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="190px" style="height:180px; position:relative; left:27%; top:-10px;">
+              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px" style="position:relative; left:-5%; top:-15px;">
 
             </div>
 
@@ -137,15 +126,10 @@ MODAL AGREGAR PRODUCTO
             <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
             <div class="form-group">
-              
+              <p>Categoria  </p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
->>>>>>> fernando
 
-                <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
+                <select class="form-control " id="nuevaCategoria" name="nuevaCategoria" required>
                   
                   <option value="">Selecionar categoría</option>
 
@@ -172,15 +156,10 @@ MODAL AGREGAR PRODUCTO
             <!-- ENTRADA PARA EL CÓDIGO -->
             
             <div class="form-group">
-              
+              <p>Codigo de Referencia</p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
+                <input type="text" class="form-control " id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
 
               </div>
 
@@ -189,15 +168,10 @@ MODAL AGREGAR PRODUCTO
             <!-- ENTRADA PARA LA Nombre -->
 
              <div class="form-group">
-              
+              <p>Nombre del Producto</p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar nombre" required>
+                <input type="text" class="form-control " name="nuevaDescripcion" placeholder="Ingresar nombre de la Pijams" required>
 
               </div>
 
@@ -206,15 +180,10 @@ MODAL AGREGAR PRODUCTO
              <!-- ENTRADA PARA STOCK -->
 
              <div class="form-group">
-              
+              <p>Cantidad</p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
->>>>>>> fernando
 
-                <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Cantidad" required>
+                <input type="number" class="form-control " name="nuevoStock" min="0" placeholder="Ingresar Cantidad" required>
 
               </div>
 
@@ -225,15 +194,10 @@ MODAL AGREGAR PRODUCTO
                 <!-- ENTRADA PARA PRECIO VENTA -->
 
                 <div class="form-group">
-
+                <p>Precio de Venta</p>
                       <div class="input-group">
-<<<<<<< HEAD
-=======
-  
-                    <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span> 
->>>>>>> fernando
 
-                    <input type="number" class="form-control input-lg" id="nuevoPrecioVenta" name="nuevoPrecioVenta" step="any" min="0" placeholder="Precio de venta" required>
+                    <input type="number" class="form-control  PrecioProducto" id="nuevoPrecioVenta" name="nuevoPrecioVenta" step="any" min="0" placeholder="Precio de venta" required>
 
                 </div>
 
@@ -275,11 +239,7 @@ MODAL EDITAR PRODUCTO
 
 <div id="modalEditarProducto" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
-=======
-  <div class="modal-dialog" style="width: 500px;">
->>>>>>> fernando
 
     <div class="modal-content">
 
@@ -289,11 +249,7 @@ MODAL EDITAR PRODUCTO
         CABEZA DEL MODAL
         ======================================-->
 
-<<<<<<< HEAD
         <div class="modal-header" >
-=======
-        <div class="modal-header" style="background:#3c8dbc; color:white">
->>>>>>> fernando
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -312,10 +268,12 @@ MODAL EDITAR PRODUCTO
             <!-- ENTRADA PARA SUBIR FOTO -->
 
             <div class="form-group">
+            <label for="file-upload" class="subir">
+             <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+           </label>
+              <input type="file" class="nuevaImagen" id="file-upload" onchange='cambiar()' name="editarImagen" style="display: none;">
 
-              <input type="file" class="nuevaImagen" name="editarImagen" style="width: 102px; background:#fff; position: relative; top:195px; left: 39%;">
-
-              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="190px" style="height:180px; position:relative; left:27%; top:-10px;">
+              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="190px" style="position:relative; left:-5%; top:-15px;">
 
               <input type="hidden" name="imagenActual" id="imagenActual">
 
@@ -327,18 +285,26 @@ MODAL EDITAR PRODUCTO
             <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
             <div class="form-group">
-              
+              <p>Categoria</p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
->>>>>>> fernando
 
-                <select class="form-control input-lg"  name="editarCategoria" readonly required>
+                <select class="form-control "  name="editarCategoria"  required>
                   
                   <option id="editarCategoria"></option>
 
+                <?php
+
+                    $item = null;
+                    $valor = null;
+
+                    $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
+
+                    foreach ($categorias as $key => $value) {
+  
+                    echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
+                }
+
+                  ?>
                 </select>
 
               </div>
@@ -348,15 +314,10 @@ MODAL EDITAR PRODUCTO
             <!-- ENTRADA PARA EL CÓDIGO -->
             
             <div class="form-group">
-              
+              <p>Codigo de Referencia</p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" readonly required>
+                <input type="text" class="form-control " id="editarCodigo" name="editarCodigo"  required>
 
               </div>
 
@@ -365,15 +326,10 @@ MODAL EDITAR PRODUCTO
             <!-- ENTRADA PARA LA DESCRIPCIÓN -->
 
              <div class="form-group">
-              
+              <p>Nombre del Producto</p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" id="editarDescripcion" name="editarDescripcion" required>
+                <input type="text" class="form-control " id="editarDescripcion" name="editarDescripcion" required>
 
               </div>
 
@@ -382,15 +338,10 @@ MODAL EDITAR PRODUCTO
              <!-- ENTRADA PARA STOCK -->
 
              <div class="form-group">
-              
+              <p>Cantidad</p>
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
->>>>>>> fernando
 
-                <input type="number" class="form-control input-lg" id="editarStock" name="editarStock" min="0" required>
+                <input type="number" class="form-control " id="editarStock" name="editarStock" min="0" required>
 
               </div>
 
@@ -399,15 +350,10 @@ MODAL EDITAR PRODUCTO
              <!-- ENTRADA PARA PRECIO Venta  -->
 
              <div class="form-group">
-                
+                <p>Precio de Venta</p>
                   <div class="input-group">
-<<<<<<< HEAD
-=======
-                  
-                    <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span> 
->>>>>>> fernando
 
-                    <input type="number" class="form-control input-lg" id="editarPrecioVenta" name="editarPrecioVenta" step="any" min="0" required>
+                    <input type="number" class="form-control  PrecioProducto" id="editarPrecioVenta" name="editarPrecioVenta" step="any" min="0" required>
 
                   </div>
 
@@ -459,6 +405,11 @@ $(document).ready(function(){
         $(this).removeClass('transition');
     });
 });
+
+function cambiar(){
+    var pdrs = document.getElementById('file-upload').files[0].name;
+    document.getElementById('info').innerHTML = pdrs;
+}
 </script>
 
 

@@ -24,13 +24,6 @@ if($_SESSION["perfil"] == "Especial"){
     
     </h1>
 
-    <ol class="breadcrumb">
-      
-      <li><a href="inicio"><i class="fa fa-home"></i> Inicio</a></li>
-      
-      <li class="active">Administrar clientes</li>
-    
-    </ol>
 
   </section>
 
@@ -42,7 +35,7 @@ if($_SESSION["perfil"] == "Especial"){
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCliente">
           
-          Agregar cliente
+          Agregar cliente &nbsp; <i class="fa fa-plus-circle"></i>
 
         </button>
 
@@ -50,11 +43,7 @@ if($_SESSION["perfil"] == "Especial"){
 
       <div class="box-body">
         
-<<<<<<< HEAD
        <table class="table dt-responsive table-bordered table-striped tablas" width="100%">
-=======
-       <table class="table table-bordered table-striped dt-responsive tablas" width="100%">
->>>>>>> fernando
          
         <thead>
          
@@ -67,7 +56,6 @@ if($_SESSION["perfil"] == "Especial"){
            <th>Teléfono</th>
            <th>Dirección</th> 
            <th>Total compras</th>
-           <th>Última compra</th>
            <th>Acciones</th>
 
          </tr> 
@@ -102,8 +90,6 @@ if($_SESSION["perfil"] == "Especial"){
 
                     <td>'.$value["compras"].'</td>
 
-                    <td>'.$value["ultima_compra"].'</td>
-
 
                     <td>
 
@@ -113,7 +99,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                       if($_SESSION["perfil"] == "Administrador"){
 
-                          echo '<button class="btn btn-danger btnEliminarCliente" idCliente="'.$value["id"].'"><i class="fa fa-times"></i></button>';
+                          echo '<button class="btn btn-danger btnEliminarCliente" idCliente="'.$value["id"].'"><i class="fa fa-trash"></i></button>';
 
                       }
 
@@ -145,11 +131,7 @@ MODAL AGREGAR CLIENTE
 
 <div id="modalAgregarCliente" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
-=======
-  <div class="modal-dialog" style="width: 500px;">
->>>>>>> fernando
 
     <div class="modal-content">
 
@@ -159,11 +141,7 @@ MODAL AGREGAR CLIENTE
         CABEZA DEL MODAL
         ======================================-->
 
-<<<<<<< HEAD
         <div class="modal-header">
-=======
-        <div class="modal-header" style="background:#3c8dbc; color:white">
->>>>>>> fernando
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -182,17 +160,10 @@ MODAL AGREGAR CLIENTE
             <!-- ENTRADA PARA EL NOMBRE -->
             
             <div class="form-group">
-              
+            <p>Nombre</p> 
               <div class="input-group">
-<<<<<<< HEAD
 
-                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Ingresar nombre"  id="nuevoCliente" required>
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Ingresar nombre" required>
->>>>>>> fernando
+                <input type="text" class="form-control " name="nuevoCliente" placeholder="Ingresar nombre"  id="nuevoCliente" required>
 
               </div>
 
@@ -201,17 +172,10 @@ MODAL AGREGAR CLIENTE
             <!-- ENTRADA PARA EL DOCUMENTO ID -->
             
             <div class="form-group">
-              
+            <p>Documento de Identificación</p> 
               <div class="input-group">
-<<<<<<< HEAD
 
-                <input type="number" min="0" class="form-control input-lg"  name="nuevoDocumentoId" placeholder="Ingresar documento" id="nuevoDocumentoId" required>
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
-
-                <input type="number" min="0" class="form-control input-lg" name="nuevoDocumentoId" placeholder="Ingresar documento" required>
->>>>>>> fernando
+                <input type="number" min="0" class="form-control "  name="nuevoDocumentoId" placeholder="Ingresar documento" id="nuevoDocumentoId" required>
 
               </div>
 
@@ -220,15 +184,10 @@ MODAL AGREGAR CLIENTE
             <!-- ENTRADA PARA EL EMAIL -->
             
             <div class="form-group">
-              
+            <p>Correo Electronico</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-envelope"></i></span> 
->>>>>>> fernando
 
-                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar email" required>
+                <input type="email" class="form-control " name="nuevoEmail" placeholder="Ingresar correo electronico" required>
 
               </div>
 
@@ -237,15 +196,10 @@ MODAL AGREGAR CLIENTE
             <!-- ENTRADA PARA EL TELÉFONO -->
             
             <div class="form-group">
-              
+            <p>Teléfono</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'999 999-9999'" data-mask required>
+                <input type="text" class="form-control " name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'999 999-9999'" data-mask required>
 
               </div>
 
@@ -254,15 +208,10 @@ MODAL AGREGAR CLIENTE
             <!-- ENTRADA PARA LA DIRECCIÓN -->
             
             <div class="form-group">
-              
+            <p>Dirección</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" required>
+                <input type="text" class="form-control" name="nuevaDireccion" placeholder="Ingresar dirección" required>
 
               </div>
 
@@ -305,11 +254,7 @@ MODAL EDITAR CLIENTE
 
 <div id="modalEditarCliente" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
-=======
-  <div class="modal-dialog" style="width: 500px;">
->>>>>>> fernando
 
     <div class="modal-content">
 
@@ -319,11 +264,7 @@ MODAL EDITAR CLIENTE
         CABEZA DEL MODAL
         ======================================-->
 
-<<<<<<< HEAD
         <div class="modal-header">
-=======
-        <div class="modal-header" style="background:#3c8dbc; color:white">
->>>>>>> fernando
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -342,15 +283,10 @@ MODAL EDITAR CLIENTE
             <!-- ENTRADA PARA EL NOMBRE -->
             
             <div class="form-group">
-              
+            <p>Nombre</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" name="editarCliente" id="editarCliente" required>
+                <input type="text" class="form-control " name="editarCliente" id="editarCliente" required>
                 <input type="hidden" id="idCliente" name="idCliente">
               </div>
 
@@ -359,15 +295,10 @@ MODAL EDITAR CLIENTE
             <!-- ENTRADA PARA EL DOCUMENTO ID -->
             
             <div class="form-group">
-              
+            <p>Documento de Identificación</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
->>>>>>> fernando
 
-                <input type="number" min="0" class="form-control input-lg" name="editarDocumentoId" id="editarDocumentoId" required>
+                <input type="number" min="0" class="form-control " name="editarDocumentoId" id="editarDocumentoId" required>
 
               </div>
 
@@ -376,16 +307,10 @@ MODAL EDITAR CLIENTE
             <!-- ENTRADA PARA EL EMAIL -->
             
             <div class="form-group">
-              
-<<<<<<< HEAD
+            <p>Correo Electronico</p> 
               <div class="input-group"> 
-=======
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-envelope"></i></span> 
->>>>>>> fernando
 
-                <input type="email" class="form-control input-lg" name="editarEmail" id="editarEmail" required>
+                <input type="email" class="form-control " name="editarEmail" id="editarEmail" required>
 
               </div>
 
@@ -394,15 +319,10 @@ MODAL EDITAR CLIENTE
             <!-- ENTRADA PARA EL TELÉFONO -->
             
             <div class="form-group">
-              
+            <p>teléfono</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" data-inputmask="'mask':'999 999-9999'" data-mask required>
+                <input type="text" class="form-control " name="editarTelefono" id="editarTelefono" data-inputmask="'mask':'999 999-9999'" data-mask required>
 
               </div>
 
@@ -411,15 +331,10 @@ MODAL EDITAR CLIENTE
             <!-- ENTRADA PARA LA DIRECCIÓN -->
             
             <div class="form-group">
-              
+            <p>Dirección</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion"  required>
+                <input type="text" class="form-control " name="editarDireccion" id="editarDireccion"  required>
 
               </div>
 

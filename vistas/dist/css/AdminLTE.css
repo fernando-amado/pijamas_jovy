@@ -12,27 +12,22 @@
 html,
 body {
   height: 100%;
+  font-style: normal;
 }
 .layout-boxed html,
 .layout-boxed body {
   height: 100%;
 }
 body {
-<<<<<<< HEAD
   font-family: 'Noto Sans JP', sans-serif; 
-=======
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
->>>>>>> fernando
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
+  font-style: normal;
 }
 /* Layout */
 .wrapper {
-  height: 100%;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
+  
 }
 .wrapper:before,
 .wrapper:after {
@@ -110,10 +105,6 @@ body {
 }
 /* Fixed layout */
 .fixed .main-header,
-<<<<<<< HEAD
-=======
-.fixed .main-sidebar,
->>>>>>> fernando
 .fixed .left-side {
   position: fixed;
 }
@@ -141,10 +132,6 @@ body {
 .hold-transition .content-wrapper,
 .hold-transition .right-side,
 .hold-transition .main-footer,
-<<<<<<< HEAD
-=======
-.hold-transition .main-sidebar,
->>>>>>> fernando
 .hold-transition .left-side,
 .hold-transition .main-header .navbar,
 .hold-transition .main-header .logo,
@@ -263,10 +250,7 @@ a:focus {
     border: 0;
   }
 }
-<<<<<<< HEAD
 @media (max-width: 767px) {
-=======
->>>>>>> fernando
 .main-header .sidebar-toggle {
   float: left;
   background-color: transparent;
@@ -287,10 +271,7 @@ a:focus {
 .main-header .sidebar-toggle .icon-bar {
   display: none;
 }
-<<<<<<< HEAD
 }
-=======
->>>>>>> fernando
 .main-header .navbar .nav > li.user > a > .fa,
 .main-header .navbar .nav > li.user > a > .glyphicon,
 .main-header .navbar .nav > li.user > a > .ion {
@@ -336,7 +317,7 @@ a:focus {
 }
 .content-header > h1 {
   margin: 0;
-  font-size: 35px;
+  font-size: 50px;
   color: #000;
 }
 .content-header > h1 > small {
@@ -534,11 +515,7 @@ a:focus {
   margin: 0;
   padding: 0;
   position: relative;
-<<<<<<< HEAD
   top: 50px;
-=======
-  top: 22px;
->>>>>>> fernando
 }
 .sidebar-menu > li {
   position: relative;
@@ -565,34 +542,8 @@ a:focus {
   padding: 10px 25px 10px 15px;
   font-size: 12px;
 }
-<<<<<<< HEAD
 
 
-=======
-.sidebar-menu li > a > .fa-angle-left,
-.sidebar-menu li > a > .pull-right-container > .fa-angle-left {
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin-right: 10px;
-  -webkit-transition: transform 0.5s ease;
-  -o-transition: transform 0.5s ease;
-  transition: transform 0.5s ease;
-}
-.sidebar-menu li > a > .fa-angle-left {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  margin-top: -8px;
-}
-.sidebar-menu .menu-open > a > .fa-angle-left,
-.sidebar-menu .menu-open > a > .pull-right-container > .fa-angle-left {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
->>>>>>> fernando
 .sidebar-menu .active > .treeview-menu {
   display: block;
 }
@@ -603,11 +554,7 @@ a:focus {
   .sidebar-mini.sidebar-collapse .content-wrapper,
   .sidebar-mini.sidebar-collapse .right-side,
   .sidebar-mini.sidebar-collapse .main-footer {
-<<<<<<< HEAD
     margin-left: 230px !important;
-=======
-    margin-left: 60px !important;
->>>>>>> fernando
     z-index: 840;
   }
   .sidebar-mini.sidebar-collapse .main-sidebar {
@@ -615,11 +562,7 @@ a:focus {
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
-<<<<<<< HEAD
     width: 230px !important;
-=======
-    width: 60px !important;
->>>>>>> fernando
     z-index: 850;
   }
   .sidebar-mini.sidebar-collapse .sidebar-menu > li {
@@ -649,11 +592,7 @@ a:focus {
     -webkit-transform: translateZ(0);
   }
   .sidebar-mini.sidebar-collapse .main-header .logo {
-<<<<<<< HEAD
     width: 230px;
-=======
-    width: 60px;
->>>>>>> fernando
   }
   .sidebar-mini.sidebar-collapse .main-header .logo > .logo-mini {
     display: block;
@@ -720,16 +659,7 @@ a:focus {
 .sidebar-menu li > a {
   position: relative;
 }
-<<<<<<< HEAD
 
-=======
-.sidebar-menu li > a > .pull-right-container {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  margin-top: -7px;
-}
->>>>>>> fernando
 /*
  * Component: Control sidebar. By default, this is the right sidebar.
  */
@@ -1141,7 +1071,7 @@ a:focus {
   border-top-left-radius: 0;
   padding: 1px 0 0 0;
   border-top-width: 0;
-  width: 280px;
+  width: 60px;
 }
 .navbar-nav > .user-menu > .dropdown-menu,
 .navbar-nav > .user-menu > .dropdown-menu > .user-body {
@@ -1398,11 +1328,7 @@ a:focus {
 .input-lg + .form-control-feedback.fa,
 .input-group-lg + .form-control-feedback.fa,
 .form-group-lg .form-control + .form-control-feedback.fa {
-<<<<<<< HEAD
   line-height: 20px;
-=======
-  line-height: 46px;
->>>>>>> fernando
 }
 .input-sm + .form-control-feedback.fa,
 .input-group-sm + .form-control-feedback.fa,
@@ -1654,8 +1580,7 @@ a:focus {
 .box {
   position: relative;
   border-radius: 3px;
-  background: #ffffff;
-  border-top: 3px solid #d2d6de;
+  background: #ffffff;    
   width: 100%;
 
 }
@@ -2140,7 +2065,6 @@ a:focus {
 .chat .item > .attachment > .filename {
   font-weight: 600;
   font-size: 13px;
-  font-style: italic;
   margin: 0;
 }
 .chat .item > .attachment:before,

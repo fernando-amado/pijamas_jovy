@@ -64,7 +64,9 @@ class TablaProductos{
 
   				$stock = "<button class='btn btn-success'>".$productos[$i]["stock"]."</button>";
 
-  			}
+			  }
+			  
+			$precio = "<td>$ ".number_format($productos[$i]["precio_venta"],2)."</td>";
 
 		  	/*=============================================
  	 		TRAEMOS LAS ACCIONES
@@ -76,20 +78,19 @@ class TablaProductos{
 
   			}else{
 
-  				 $botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarProducto' idProducto='".$productos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarProducto' idProducto='".$productos[$i]["id"]."' codigo='".$productos[$i]["codigo"]."' imagen='".$productos[$i]["imagen"]."'><i class='fa fa-times'></i></button></div>"; 
+  				 $botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarProducto' idProducto='".$productos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarProducto' idProducto='".$productos[$i]["id"]."' codigo='".$productos[$i]["codigo"]."' imagen='".$productos[$i]["imagen"]."'><i class='fa fa-trash'></i></button></div>"; 
 
   			}
 
 		 
 		  	$datosJson .='[
-			      "'.($i+1).'",
+				  "'.($i+1).'",
+				  "'.$productos[$i]["codigo"].'",
 			      "'.$imagen.'",
-			      "'.$productos[$i]["codigo"].'",
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$categorias["categoria"].'",
 			      "'.$stock.'",
-			      "'.$productos[$i]["precio_venta"].'",
-			      "'.$productos[$i]["fecha"].'",
+			      "'.$precio.'",
 			      "'.$botones.'"
 			    ],';
 

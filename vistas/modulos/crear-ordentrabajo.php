@@ -1,21 +1,20 @@
-<<<<<<< HEAD
 <style>
   @media (max-width: 600px) {
     .for{
         position:relative;
         left: 0%;
+        width: 100%;
     }
   }
   @media (min-width: 1200px) {
     .for{
         position:relative;
         left: 25%;
+        top: 40px;
     }
   }
 </style>
 
-=======
->>>>>>> fernando
 <?php
 
 if($_SESSION["perfil"] == "Especial"){
@@ -38,25 +37,10 @@ if($_SESSION["perfil"] == "Especial"){
     
     <h1>
       
-<<<<<<< HEAD
       Registrar orden de trabajo
-=======
-      Crear Orden trabajo
->>>>>>> fernando
     
     </h1>
 
-    <ol class="breadcrumb">
-      
-      <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-      
-<<<<<<< HEAD
-      <li class="active">Crear Ordentrabajo</li>
-=======
-      <li class="active">Crear Orden</li>
->>>>>>> fernando
-    
-    </ol>
 
   </section>
 
@@ -64,17 +48,51 @@ if($_SESSION["perfil"] == "Especial"){
 
     <div class="row">
 
+          <!--=====================================
+      LA TABLA DE PRODUCTOS
+      ======================================-->
+
+      <div class="col-lg-12 hidden-md hidden-sm hidden-xs" style="position:ralative; top:0px;">
+        
+        <div class="" style="background:white;" >
+
+          <div class="box-header "></div>
+
+          <div class="box-body" >
+            <div class="div1">
+            <table class="table table-bordered table-striped dt-responsive tablaOrden" >
+              
+               <thead >
+
+                 <tr>
+                  <th style="width: 10px">#</th>
+                  <th>Imagen</th>
+                  <th>Código</th>
+                  <th>Descripcion</th>
+                  <th>Cantidad</th>
+                  <th>Acciones</th>
+                </tr>
+
+              </thead>
+
+            </table>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
       <!--=====================================
       EL FORMULARIO
       ======================================-->
       
-<<<<<<< HEAD
       <div class="col-lg-6 col-xs-10 for" >
-=======
-      <div class="col-lg-5 col-xs-12">
->>>>>>> fernando
         
-        <div class="box ">
+        <div class="box " style="box-shadow: 0 0 9px 0 rgb(57, 152, 255);">
           
           <div class="box-header with-border"></div>
 
@@ -85,38 +103,12 @@ if($_SESSION["perfil"] == "Especial"){
               <div class="box">
 
                 <!--=====================================
-<<<<<<< HEAD
-=======
-                ENTRADA DEL VENDEDOR
-                ======================================-->
-            
-                <div class="form-group">
-                
-                  <div class="input-group">
-                    
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span> 
-
-                    <input type="text" class="form-control" id="nuevoUsuario" value="<?php echo $_SESSION["nombre"]; ?>" readonly>
-
-                    <input type="hidden" name="idUsuario" value="<?php echo $_SESSION["id"]; ?>">
-
-                  </div>
-
-                </div> 
-
-                <!--=====================================
->>>>>>> fernando
                 ENTRADA DEL CÓDIGO
                 ======================================--> 
 
                 <div class="form-group">
-                  
+                  <p>Codigo de Referencia</p>
                   <div class="input-group">
-<<<<<<< HEAD
-=======
-                    
-                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
->>>>>>> fernando
 
                     <?php
 
@@ -125,11 +117,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                     $ordentrabajo = ControladorOrdentrabajo::ctrMostrarOrdentrabajo($item, $valor);
 
-<<<<<<< HEAD
                     if(!$ordentrabajo ){
-=======
-                    if(!$ordentrabajo){
->>>>>>> fernando
 
                       echo '<input type="text" class="form-control" id="nuevaOrdentrabajo" name="nuevaOrdentrabajo" value="10001" readonly>';
                   
@@ -157,14 +145,13 @@ if($_SESSION["perfil"] == "Especial"){
                   </div>
                 
                 </div>
-<<<<<<< HEAD
 
                 <!--=====================================
                 ENTRADA DEL VENDEDOR
                 ======================================-->
             
                 <div class="form-group">
-                
+                <p>Usuario</p>
                   <div class="input-group">
 
                     <input type="text" class="form-control" id="nuevoUsuario" value="<?php echo $_SESSION["nombre"]; ?>" readonly>
@@ -177,80 +164,56 @@ if($_SESSION["perfil"] == "Especial"){
 
                 <!-- ENTRADA PARA LA Nombre -->
 
-                         <div class="form-group">
-              
+                <div class="form-group">
+              <p>Producto</p>
               <div class="input-group">
 
-                <input type="number" class="form-control input-lg" name="nuevaCantidadsolicitada" min="0" placeholder="Ingresar Cantidad Solicitada" required>
-=======
-                <!-- ENTRADA PARA LA Nombre -->
-
-             <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaCantidadsolicitada" placeholder="Ingresar cantidad solicitada" required>
->>>>>>> fernando
+                <input type="text" class="form-control " name="nuevaProducto" min="0" placeholder="Ingresar Nombre de la Pijama" required>
 
               </div>
 
             </div>
 
-<<<<<<< HEAD
+                <!-- ENTRADA PARA LA Nombre -->
+
+                         <div class="form-group">
+              <p>Cantidad Solicitada</p>
+              <div class="input-group">
+
+                <input type="number" class="form-control " name="nuevaCantidadsolicitada" min="0" placeholder="Ingresar Cantidad Solicitada" required>
+
+              </div>
+
+            </div>
+
              <!-- ENTRADA PARA STOCK -->
 
              <div class="form-group">
-              
+              <p>Cantidad Entregada</p>
               <div class="input-group">
 
-                <input type="number" class="form-control input-lg" name="nuevaCantidadentregada" min="0" placeholder="Ingresar Cantidad Entregada" required>
-=======
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaCantidadentregada" placeholder="Ingresar cantidad entregada" required>
->>>>>>> fernando
+                <input type="number" class="form-control" name="nuevaCantidadentregada" min="0" placeholder="Ingresar Cantidad Entregada" required>
 
               </div>
 
             </div>
-<<<<<<< HEAD
              
 
                 <!-- ENTRADA PARA PRECIO VENTA -->
 
                 <div class="form-group">
+                <p>Fecha de Entrega</p>
 
                       <div class="input-group">
 
-                    <input type="date" class="form-control input-lg" id="nuevaFechaentrega" name="nuevaFechaentrega" required>
+                    <input type="date" class="form-control"  name="nuevaFechaentrega" required>
 
                 </div>
-=======
-
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
-
-                <input type="date" class="form-control input-lg" name="nuevaFechaentrega" placeholder="" required>
-
-              </div>
->>>>>>> fernando
 
             </div>
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> fernando
                 <!--=====================================
                 ENTRADA PARA AGREGAR PRODUCTO
                 ======================================--> 
@@ -267,7 +230,6 @@ if($_SESSION["perfil"] == "Especial"){
                 BOTÓN PARA AGREGAR PRODUCTO
                 ======================================-->
 
-<<<<<<< HEAD
                 <button type="button" class="btn btn-default hidden-lg btnAgregarProduct">Agregar Material</button>
 
                 </div>
@@ -278,13 +240,6 @@ if($_SESSION["perfil"] == "Especial"){
           <div class="box-footer">
 
             <button type="submit" class="btn btn-primary pull-right">Guardar Orden</button>
-=======
-                <button type="button" class="btn btn-default hidden-lg btnAgregarProduct">Agregar producto</button>
-
-          <div class="box-footer">
-
-            <button type="submit" class="btn btn-primary pull-right">Guardar venta</button>
->>>>>>> fernando
 
           </div>
 
@@ -292,7 +247,6 @@ if($_SESSION["perfil"] == "Especial"){
 
         <?php
 
-<<<<<<< HEAD
           $guardarOrdentrabajo = new ControladorOrdentrabajo();
           $guardarOrdentrabajo-> ctrCrearOrdentrabajo();
           
@@ -301,71 +255,13 @@ if($_SESSION["perfil"] == "Especial"){
         </div>
             
       </div>
-=======
-          $guardarordentrabajo = new ControladorOrdentrabajo();
-          $guardarordentrabajo -> ctrCrearOrdentrabajo();
-          
-        ?>
-        </div>
-
-    </div>
->>>>>>> fernando
-
-      <!--=====================================
-      LA TABLA DE PRODUCTOS
-      ======================================-->
-
-<<<<<<< HEAD
-      <div class="col-lg-12 hidden-md hidden-sm hidden-xs" style="position:ralative; top:20px;">
-        
-        <div class="" style="background:white;" >
-
-          <div class="box-header "></div>
-=======
-      <div class="col-lg-7 hidden-md hidden-sm hidden-xs">
-        
-        <div class="box ">
-
-          <div class="box-header with-border"></div>
->>>>>>> fernando
-
-          <div class="box-body">
-            
-            <table class="table table-bordered table-striped dt-responsive tablaOrden">
-              
-               <thead>
-
-                 <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Imagen</th>
-                  <th>Código</th>
-                  <th>Descripcion</th>
-                  <th>Cantidad</th>
-                  <th>Acciones</th>
-                </tr>
-
-              </thead>
-
-            </table>
-
-          </div>
-
-        </div>
 
 
-      </div>
 
-    </div>
+    </div>  <br><br><br>
    
   </section>
-<<<<<<< HEAD
-  <br><br>
-</div>
-
-=======
 
 </div>
 
 
-</div>
->>>>>>> fernando

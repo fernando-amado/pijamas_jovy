@@ -34,7 +34,7 @@ class TablaProductosVentas{
  	 		TRAEMOS LA IMAGEN
   			=============================================*/ 
 
-		  	$imagen = "<img src='".$productos[$i]["imagen"]."' width='150px' height='150px'>";
+		  	$imagen = "<img src='".$productos[$i]["imagen"]."' width='290px' height='290px'>";
 
 		  	/*=============================================
  	 		STOCK
@@ -61,9 +61,8 @@ class TablaProductosVentas{
 		  	$botones =  "<div class='btn-group'><button class='btn btn-primary agregarProducto recuperarBoton' idProducto='".$productos[$i]["id"]."'>Agregar</button></div>"; 
 
 		  	$datosJson .='[
-			      "'.($i+1).'",
+				  "'.$productos[$i]["codigo"].'",
 			      "'.$imagen.'",
-			      "'.$productos[$i]["codigo"].'",
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$stock.'",
 			      "'.$botones.'"

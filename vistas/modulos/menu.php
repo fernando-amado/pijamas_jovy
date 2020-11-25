@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <style>
 .foto{
 	width: 100px;
@@ -12,8 +11,6 @@
 
 </style>
 
-=======
->>>>>>> fernando
 <aside class="main-sidebar">
 
 	 <section class="sidebar">
@@ -22,69 +19,77 @@
 
 		<?php
 
-<<<<<<< HEAD
-		if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Costurero") {
+		if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Costurero" || $_SESSION["perfil"] == "Vendedor") {
 			if($_SESSION["foto"] != ""){
 
-				echo '<center><img src=" '.$_SESSION["foto"].'" class="foto"></center><br>
-				        <center><span class="nombre">'.$_SESSION["nombre"].'</span></center><br>';
+				echo '<br><center><img src=" '.$_SESSION["foto"].'" class="foto"></center><br>
+				        <center><span class="nombre">'.$_SESSION["nombre"].'</span></center><br><br>';
 
 			}else{
 
 
-				echo '<center><img src="vistas/img/usuarios/default/anonymous.png" class="user-image"></center>';
+				echo '<center><img src="vistas/img/usuarios/default/anonymous.png" class="user-image"></center><br>';
 			}
 		}
 
-=======
->>>>>>> fernando
 		if($_SESSION["perfil"] == "Administrador"){
 
 			echo '<li class="active">
 
+			<a >
+
+				
+
+			</a>
+
+		</li>
+			
+			<li >
+
 				<a href="inicio">
 
 					<i class="fa fa-home"></i>
-<<<<<<< HEAD
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inicio
-=======
-					<span>Inicio</span>
->>>>>>> fernando
 
 				</a>
 
 			</li>
+			<li class="active">
+
+			<a >
+
+				
+
+			</a>
+
+		</li>
 
 			<li>
 
 				<a href="usuarios">
 
 					<i class="fa fa-user"></i>
-<<<<<<< HEAD
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usuarios
-=======
-					<span>Usuarios</span>
->>>>>>> fernando
-
-				</a>
-
-			</li>
-			<li>
-
-				<a href="tipomaterial">
-
-					<i class="fa fa-th"></i>
-<<<<<<< HEAD
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tipo de Materiales
-=======
-					<span>Tipo de Materiales</span>
->>>>>>> fernando
 
 				</a>
 
 			</li>';
 
 		}
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
+
+			echo '<li>
+
+				<a href="clientes">
+
+					<i class="fa fa-users"></i>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clientes
+
+				</a>
+
+			</li>';
+
+		}	
 
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Costurero"){
 
@@ -93,11 +98,7 @@
 				<a href="categorias">
 
 					<i class="fa fa-tags"></i>
-<<<<<<< HEAD
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Categorias
-=======
-					<span>Categorías</span>
->>>>>>> fernando
 
 				</a>
 
@@ -108,11 +109,18 @@
 				<a href="productos">
 
 					<i class="fa fa-product-hunt"></i>
-<<<<<<< HEAD
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Productos
-=======
-					<span>Productos</span>
->>>>>>> fernando
+
+				</a>
+
+			</li>
+			
+			<li>
+
+				<a href="tipomaterial">
+
+					<i class="fa fa-th"></i>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tipo de Materiales
 
 				</a>
 
@@ -122,11 +130,7 @@
 				<a href="material">
 
 					<i class="fa fa-cut" style="font-size:18px;"></i>
-<<<<<<< HEAD
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Material
-=======
-					<span>Materiales</span>
->>>>>>> fernando
 
 				</a>
 
@@ -136,11 +140,7 @@
 				<a href="ordentrabajo">
 
 					<i class="fa fa-cut" style="font-size:18px;"></i>
-<<<<<<< HEAD
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Orden de trabajo
-=======
-					<span>Orden de trabajo</span>
->>>>>>> fernando
 
 				</a>
 
@@ -148,28 +148,10 @@
 
 		}
 
-		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
-
-			echo '<li>
-
-				<a href="clientes">
-
-					<i class="fa fa-users"></i>
-<<<<<<< HEAD
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clientes
-=======
-					<span>Clientes</span>
->>>>>>> fernando
-
-				</a>
-
-			</li>';
-
-		}
+		
 
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor"){
 
-<<<<<<< HEAD
 			echo '<li>
 
 				<a href="ventas">
@@ -180,47 +162,6 @@
 				</a>
 
 			</li>';
-=======
-			echo '<li class="treeview">
-
-				<a href="#">
-
-					<i class="fa fa-shopping-cart" style="font-size:18px;"></i>
-					
-					<span>Ventas</span>
-					
-					<span class="pull-right-container">
-					
-						<i class="fa fa-angle-left pull-right"></i>
-
-					</span>
-
-				</a>
-
-				<ul class="treeview-menu">
-					
-					<li>
-
-						<a href="ventas">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Administrar ventas</span>
-
-						</a>
-
-					</li>
-
-					<li>
-
-						<a href="crear-venta">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Crear venta</span>
-
-						</a>
-
-					</li>';
->>>>>>> fernando
 
 					if($_SESSION["perfil"] == "Administrador"){
 
@@ -238,7 +179,7 @@
 
 			</li>';
 
-		}
+		} 
 
 		?>
 

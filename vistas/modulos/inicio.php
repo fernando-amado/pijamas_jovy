@@ -8,12 +8,6 @@
     
     </h1>
 
-    <ol class="breadcrumb">
-      
-      <li><a href="inicio"><i class="fa fa-home"></i> Inicio</a></li>
-    
-    </ol>
-
   </section>
 
   <section class="content">

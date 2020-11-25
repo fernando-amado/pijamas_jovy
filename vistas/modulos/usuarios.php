@@ -23,13 +23,6 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
     
     </h1>
 
-    <ol class="breadcrumb">
-      
-      <li><a href="inicio"><i class="fa fa-home"></i> Inicio</a></li>
-      
-      <li class="active">Administrar usuarios</li>
-    
-    </ol>
 
   </section>
 
@@ -37,11 +30,11 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 
     <div class="box">
 
-      <div class="box-header with-border">
+      <div class="box-header ">
   
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuario">
           
-          Agregar usuario
+          Agregar usuario &nbsp; <i class="fa fa-plus-circle"></i>
 
         </button>
 
@@ -58,10 +51,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
            <th style="width:10px">#</th>
            <th>Nombre</th>
            <th>Usuario</th>
-<<<<<<< HEAD
            <th>Correo Electronico</th>
-=======
->>>>>>> fernando
            <th>Foto</th>
            <th>Perfil</th>
            <th>Estado</th>
@@ -86,12 +76,8 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
           echo ' <tr>
                   <td>'.($key+1).'</td>
                   <td>'.$value["nombre"].'</td>
-<<<<<<< HEAD
                   <td>'.$value["usuario"].'</td>
                   <td>'.$value["correo"].'</td>';
-=======
-                  <td>'.$value["usuario"].'</td>';
->>>>>>> fernando
 
                   if($value["foto"] != ""){
 
@@ -122,7 +108,7 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
                         
                       <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
 
-                      <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
+                      <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-trash"></i></button>
 
                     </div>  
 
@@ -152,33 +138,21 @@ MODAL AGREGAR USUARIO
 
 <div id="modalAgregarUsuario" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
-=======
-  <div class="modal-dialog" style="width: 500px;">
->>>>>>> fernando
 
-    <div class="modal-content">
+    <div class="modal-content smart-forms">
 
-      <form role="form" method="post" enctype="multipart/form-data">
+      <form role="form" method="post" id="smart-form" enctype="multipart/form-data">
 
         <!--=====================================
         CABEZA DEL MODAL
         ======================================-->
 
-<<<<<<< HEAD
         <div class="modal-header" >
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
           <h4 class="modal-title" >Agregar usuario</h4>
-=======
-        <div class="modal-header" style="background:#3c8dbc; color:white">
-
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-          <h4 class="modal-title">Agregar usuario</h4>
->>>>>>> fernando
 
         </div>
 
@@ -193,32 +167,27 @@ MODAL AGREGAR USUARIO
             <!-- ENTRADA PARA SUBIR FOTO -->
 
             <div class="form-group">
+            <label for="file-upload" class="subir">
+             <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+           </label>
 
-              <input type="file" class=" nuevaFoto" name="nuevaFoto" style="width: 102px; background:#000; position: absolute; top:215px; left: 40%;">
+              <input type="file" id="file-upload" onchange='cambiar()' class=" nuevaFoto" name="nuevaFoto" style="display: none;">
 
-<<<<<<< HEAD
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="200px" style="position:relative; left:24%; top:-10px;" >
-=======
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="200px" style="position:relative; left:27%; top:-10px;" >
->>>>>>> fernando
+              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="200px" style="position:relative; left:-3.3%; top:-15px;">
 
             </div>
 
-          </div>  
+          </div> 
 
             <!-- ENTRADA PARA EL NOMBRE -->
             
             <div class="form-group">
+               
               
-              <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
->>>>>>> fernando
-
-                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
-
+              <div class="  input-group">
+              <p class="field">Nombre
+                <input type="text" class="form-control gui-input" name="nuevoNombre" placeholder="Ingresar nombre" data-rule-required="true" data-msg-required="Este campo es obligatorio">
+                </p>
               </div>
 
             </div>
@@ -226,12 +195,11 @@ MODAL AGREGAR USUARIO
             <!-- ENTRADA PARA EL USUARIO -->
 
              <div class="form-group">
-              
-              <div class="input-group">
-<<<<<<< HEAD
-
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
-
+             
+              <div class="  input-group">
+              <p class="field">Usuario 
+                <input type="text" class="form-control gui-input" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" data-rule-required="true" data-msg-required="Este campo es obligatorio">
+                </p>
               </div>
 
             </div>
@@ -239,17 +207,11 @@ MODAL AGREGAR USUARIO
             <!-- ENTRADA PARA EL CORREO -->
 
             <div class="form-group">
-              
+            
               <div class="input-group">
-
-                <input type="text" class="form-control input-lg" name="nuevoCorreo" placeholder="Ingresar correo electronico" id="nuevoCorreo" required>
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
->>>>>>> fernando
-
+              <p class="field">Correo Electronico
+                <input type="text" class="form-control gui-input" name="nuevoCorreo" placeholder="Ingresar correo electronico" id="nuevoCorreo" data-rule-required="true" data-rule-email="true" data-msg-required="Este campo es obligatorio" data-msg-email="Este correo electronico no es valido">
+                </p> 
               </div>
 
             </div>
@@ -257,15 +219,39 @@ MODAL AGREGAR USUARIO
             <!-- ENTRADA PARA LA CONTRASEÑA -->
 
              <div class="form-group">
-              
+             <p>Contraseña</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
->>>>>>> fernando
 
-                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" required>
+              <?php
+
+$item = null;
+$valor = null;
+
+$usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+
+if(!$usuarios){
+
+  echo '<input type="password" class="form-control" id="nuevoPassword"   readonly>';
+
+
+}else{
+
+  foreach ($usuarios as $key => $value) {
+    
+    
+  
+  }
+
+  $password = 32659321 + 481 ;
+
+
+
+  echo '<input type="password" class="form-control" id="nuevoPassword" name="nuevoPassword" value="'.$password.'" readonly>';
+
+
+}
+
+?>
 
               </div>
 
@@ -274,16 +260,11 @@ MODAL AGREGAR USUARIO
             <!-- ENTRADA PARA SELECCIONAR SU PERFIL -->
 
             <div class="form-group">
-              
-<<<<<<< HEAD
+             
               <div class="input-group"> 
-=======
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-users"></i></span> 
->>>>>>> fernando
-
-                <select class="form-control input-lg" name="nuevoPerfil">
+              <p class="field select" >Perfil de Usuario
+                <select class="form-control"  name="nuevoPerfil" data-rule-required="true"
+                                    data-msg-required="Es obligatorio seleccionar una opcion" >
                   
                   <option value="">Selecionar perfil</option>
 
@@ -294,7 +275,8 @@ MODAL AGREGAR USUARIO
                   <option value="Vendedor">Vendedor</option>
 
                 </select>
-
+                <i class="arrow "></i>
+                </p>
               </div>
 
             </div>
@@ -335,11 +317,7 @@ MODAL EDITAR USUARIO
 
 <div id="modalEditarUsuario" class="modal fade" role="dialog">
   
-<<<<<<< HEAD
   <div class="modal-dialog" style="width: 450px;">
-=======
-  <div class="modal-dialog" style="width: 500px;">
->>>>>>> fernando
 
     <div class="modal-content">
 
@@ -349,11 +327,7 @@ MODAL EDITAR USUARIO
         CABEZA DEL MODAL
         ======================================-->
 
-<<<<<<< HEAD
         <div class="modal-header" >
-=======
-        <div class="modal-header" style="background:#3c8dbc; color:white">
->>>>>>> fernando
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -372,80 +346,51 @@ MODAL EDITAR USUARIO
             <!-- ENTRADA PARA SUBIR FOTO -->
 
             <div class="form-group">
-
-              <input type="file" class="nuevaFoto" name="editarFoto" style="width: 102px; background:#000; position: absolute; top:215px; left: 40%;">
-
-<<<<<<< HEAD
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="200px" style="position:relative; left:24%; top:-10px;">
-=======
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="200px" style="position:relative; left:27%; top:-10px;">
->>>>>>> fernando
+            <label for="file-upload" class="subir">
+             <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+           </label>
+              <input type="file" id="file-upload" onchange='cambiar()' class="nuevaFoto" name="editarFoto" style="display: none; ">
+              
+              <img src="vistas/img/usuarios/default/anonymous.png"  class="img-thumbnail previsualizar previsualizarEditar" width="200px" style="position:relative; left:-5%; top:-10px;">
 
               <input type="hidden" name="fotoActual" id="fotoActual">
 
             </div>
 
-          </div>
+          </div><br>
 
             <!-- ENTRADA PARA EL NOMBRE -->
             
             <div class="form-group">
-              
+            <p>Nombre</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" value="" required>
+                <input type="text" class="form-control " id="editarNombre" name="editarNombre" value="" required>
 
               </div>
 
             </div>
-<<<<<<< HEAD
             
-=======
->>>>>>> fernando
 
             <!-- ENTRADA PARA EL USUARIO -->
 
              <div class="form-group">
-              
+             <p>Usuario</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-key"></i></span> 
->>>>>>> fernando
 
-                <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario" value="" readonly>
+                <input type="text" class="form-control" id="editarUsuario" name="editarUsuario" value="" readonly>
 
               </div>
 
             </div>
 
-<<<<<<< HEAD
             <!-- ENTRADA PARA EL CORREO -->
 
             <div class="form-group">
-              
+            <p>Correo Electronico</p> 
               <div class="input-group">
 
-                <input type="email" class="form-control input-lg" id="editarCorreo" name="editarCorreo" value="" required>
-=======
-            <!-- ENTRADA PARA LA CONTRASEÑA -->
-
-             <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
-
-                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Escriba la nueva contraseña">
-
-                <input type="hidden" id="passwordActual" name="passwordActual">
->>>>>>> fernando
+                <input type="email" class="form-control " id="editarCorreo" name="editarCorreo" value="" required>
 
               </div>
 
@@ -454,15 +399,10 @@ MODAL EDITAR USUARIO
             <!-- ENTRADA PARA SELECCIONAR SU PERFIL -->
 
             <div class="form-group">
-              
+            <p>Perfil de Usuario</p> 
               <div class="input-group">
-<<<<<<< HEAD
-=======
-              
-                <span class="input-group-addon"><i class="fa fa-users"></i></span> 
->>>>>>> fernando
 
-                <select class="form-control input-lg" name="editarPerfil">
+                <select class="form-control " name="editarPerfil">
                   
                   <option value="" id="editarPerfil"></option>
 
@@ -515,4 +455,9 @@ MODAL EDITAR USUARIO
 
 ?> 
 
-
+<script>
+function cambiar(){
+    var pdrs = document.getElementById('file-upload').files[0].name;
+    document.getElementById('info').innerHTML = pdrs;
+}
+</script>

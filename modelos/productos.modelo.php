@@ -2,15 +2,7 @@
 
 require_once "conexion.php";
 
-<<<<<<< HEAD
 class ModeloProductos{
-=======
-
-use \Modelos\Conexion;
-
-
-class ModeloProductos extends Conexion{
->>>>>>> fernando
 
 	/*=============================================
 	MOSTRAR PRODUCTOS
